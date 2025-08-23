@@ -36,3 +36,7 @@
     - [Generics](./generics.md)
     - [File I/O](./file_io.md)
     - [Threads](./threads.md)
+
+---
+
+[Useful Resources](./useful_resources.md)
