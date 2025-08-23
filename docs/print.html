@@ -665,10 +665,12 @@ public class Main {
 <p>This section delves into more advanced topics in Java that are essential for building robust and scalable applications. We will cover a range of concepts that will help you write more professional and efficient code.</p>
 <p>In this section, you will learn about:</p>
 <ul>
-<li><strong>Packages</strong>: How to organize your code into logical units.</li>
 <li><strong>Exceptions</strong>: How to handle errors and exceptional situations in your programs.</li>
 <li><strong>Collections</strong>: The Java Collections Framework for working with groups of objects.</li>
 <li><strong>Streams</strong>: A powerful API for processing sequences of elements.</li>
+<li><strong>File I/O</strong>: How to read from and write to files.</li>
+<li><strong>Threads</strong>: How to work with threads for concurrent programming.</li>
+<li><strong>Generics</strong>: How to write flexible and reusable code with generics.</li>
 </ul>
 <p>By mastering these topics, you will be well-equipped to tackle more complex programming challenges in Java.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="exceptions"><a class="header" href="#exceptions">Exceptions</a></h1>
@@ -1054,22 +1056,6 @@ public class WriteFileExample {
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 
