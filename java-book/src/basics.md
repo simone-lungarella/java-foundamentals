@@ -6,6 +6,8 @@ This chapter introduces the fundamental building blocks of the Java language, pr
 
 At the core of every Java program is a **class**. The execution of a program begins in the `main` method, which serves as the entry point. It is important to be mindful of Java's syntax rules. The language is case-sensitive, meaning that `myVariable` and `MyVariable` would be treated as two distinct variables. By convention, class names should always begin with an uppercase letter, while method names should start with a lowercase letter.
 
+Check out the [Java naming convention](https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html) to learn how to properly name things in Java.
+
 ## "Hello, World!" Example
 
 The simplest program you can write in Java is the classic "Hello, World!". This program's sole purpose is to print the phrase "Hello, World!" to the console.

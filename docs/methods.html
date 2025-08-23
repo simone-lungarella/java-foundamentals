@@ -180,8 +180,8 @@
 <h2 id="defining-a-method"><a class="header" href="#defining-a-method">Defining a Method</a></h2>
 <p>A method definition includes several components. It starts with an access modifier, such as <code>public</code> or <code>private</code>, which controls the method's visibility. This is followed by the return type, which specifies the data type of the value the method will return. If the method does not return any value, the <code>void</code> keyword is used. The method name is a unique identifier for the method. Optionally, a method can accept a list of input values, known as parameters. The code to be executed is contained within the method body.</p>
 <pre><code class="language-java">public class MyClass {
-    // access_modifier return_type method_name(parameters)
-    public           void        greet(String name) {
+
+    public void greet(String name) {
         // Method body
         System.out.println("Hello, " + name);
     }
@@ -191,8 +191,8 @@
 <p>To execute a method, you typically need to create an object of the class to which the method belongs, unless the method is declared as <code>static</code>. Once you have an object, you can call the method on it.</p>
 <pre><code class="language-java">public class Main {
     public static void main(String[] args) {
-        MyClass myObject = new MyClass(); // Create an object of MyClass
-        myObject.greet("Simone");         // Call the greet method
+        MyClass myObject = new MyClass(); // Create an instance of MyClass
+        myObject.greet("Mario");         // Call the greet method
     }
 }
 </code></pre>

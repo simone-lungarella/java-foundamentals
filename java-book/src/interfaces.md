@@ -9,7 +9,7 @@ An interface is defined using the `interface` keyword. The methods declared in a
 ```java
 interface Animal {
     // These methods are implicitly public and abstract
-    void animalSound();
+    void emitSound();
     void sleep();
 }
 ```
@@ -21,8 +21,8 @@ A class can implement an interface using the `implements` keyword. When a class 
 ```java
 // The Pig class implements the Animal interface
 class Pig implements Animal {
-    // Provide an implementation for the animalSound method
-    public void animalSound() {
+    // Provide an implementation for the emitSound method
+    public void emitSound() {
         System.out.println("The pig says: wee wee");
     }
 
@@ -35,7 +35,7 @@ class Pig implements Animal {
 class Main {
     public static void main(String[] args) {
         Pig myPig = new Pig();
-        myPig.animalSound();
+        myPig.emitSound();
         myPig.sleep();
     }
 }

@@ -209,6 +209,7 @@
 <p>This chapter introduces the fundamental building blocks of the Java language, providing a foundation for writing your first programs.</p>
 <h2 id="basic-syntax"><a class="header" href="#basic-syntax">Basic Syntax</a></h2>
 <p>At the core of every Java program is a <strong>class</strong>. The execution of a program begins in the <code>main</code> method, which serves as the entry point. It is important to be mindful of Java's syntax rules. The language is case-sensitive, meaning that <code>myVariable</code> and <code>MyVariable</code> would be treated as two distinct variables. By convention, class names should always begin with an uppercase letter, while method names should start with a lowercase letter.</p>
+<p>Check out the <a href="https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html">Java naming convention</a> to learn how to properly name things in Java.</p>
 <h2 id="hello-world-example"><a class="header" href="#hello-world-example">"Hello, World!" Example</a></h2>
 <p>The simplest program you can write in Java is the classic "Hello, World!". This program's sole purpose is to print the phrase "Hello, World!" to the console.</p>
 <pre><code class="language-java">public class HelloWorld {
@@ -333,8 +334,8 @@ do {
 <h2 id="defining-a-method"><a class="header" href="#defining-a-method">Defining a Method</a></h2>
 <p>A method definition includes several components. It starts with an access modifier, such as <code>public</code> or <code>private</code>, which controls the method's visibility. This is followed by the return type, which specifies the data type of the value the method will return. If the method does not return any value, the <code>void</code> keyword is used. The method name is a unique identifier for the method. Optionally, a method can accept a list of input values, known as parameters. The code to be executed is contained within the method body.</p>
 <pre><code class="language-java">public class MyClass {
-    // access_modifier return_type method_name(parameters)
-    public           void        greet(String name) {
+
+    public void greet(String name) {
         // Method body
         System.out.println("Hello, " + name);
     }
@@ -344,8 +345,8 @@ do {
 <p>To execute a method, you typically need to create an object of the class to which the method belongs, unless the method is declared as <code>static</code>. Once you have an object, you can call the method on it.</p>
 <pre><code class="language-java">public class Main {
     public static void main(String[] args) {
-        MyClass myObject = new MyClass(); // Create an object of MyClass
-        myObject.greet("Simone");         // Call the greet method
+        MyClass myObject = new MyClass(); // Create an instance of MyClass
+        myObject.greet("Mario");         // Call the greet method
     }
 }
 </code></pre>
@@ -496,7 +497,7 @@ public class Car extends Vehicle {
 <p>An interface is defined using the <code>interface</code> keyword. The methods declared in an interface are abstract by default, meaning they do not have a body. Similarly, any attributes declared in an interface are automatically <code>public</code>, <code>static</code>, and <code>final</code>.</p>
 <pre><code class="language-java">interface Animal {
     // These methods are implicitly public and abstract
-    void animalSound();
+    void emitSound();
     void sleep();
 }
 </code></pre>
@@ -504,8 +505,8 @@ public class Car extends Vehicle {
 <p>A class can implement an interface using the <code>implements</code> keyword. When a class implements an interface, it must provide a concrete implementation for all the methods declared in that interface. This ensures that the class adheres to the contract defined by the interface.</p>
 <pre><code class="language-java">// The Pig class implements the Animal interface
 class Pig implements Animal {
-    // Provide an implementation for the animalSound method
-    public void animalSound() {
+    // Provide an implementation for the emitSound method
+    public void emitSound() {
         System.out.println("The pig says: wee wee");
     }
 
@@ -518,7 +519,7 @@ class Pig implements Animal {
 class Main {
     public static void main(String[] args) {
         Pig myPig = new Pig();
-        myPig.animalSound();
+        myPig.emitSound();
         myPig.sleep();
     }
 }
@@ -562,7 +563,7 @@ public class Main {
 }
 </code></pre>
 <h3 id="importing-an-entire-package"><a class="header" href="#importing-an-entire-package">Importing an Entire Package</a></h3>
-<p>If you need to use multiple classes from the same package, you can import all of them at once using the <code>*</code> wildcard.</p>
+<p>If you need to use multiple classes from the same package, Java allows to import all of them at once using the <code>*</code> wildcard, although it is considered bad practice.</p>
 <pre><code class="language-java">import java.util.*;
 
 public class Main {
@@ -610,8 +611,34 @@ public class Main {
     }
 }
 </code></pre>
+<h2 id="try-with-resources"><a class="header" href="#try-with-resources">Try With Resources</a></h2>
+<p><code>finally</code> blocks are often used to handle cleanup operations. For example, it's common to close a resource, but this can lead to verbose and nested code, especially when the cleanup operation itself can throw an exception.</p>
+<p>The <code>try-with-resources</code> statement, introduced in Java 7, simplifies this process by ensuring that each resource is closed at the end of the statement. A resource is an object that must be closed after the program is finished with it, such as a file or a database connection.</p>
+<p>Any object that implements the <code>java.lang.AutoCloseable</code> interface can be used as a resource.</p>
+<p>Here is an example of using <code>try-with-resources</code> to read from a file:</p>
+<pre><code class="language-java">import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) {
+        try (BufferedReader br = new BufferedReader(new FileReader("file.txt"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            System.out.println("An I/O error occurred: " + e.getMessage());
+        }
+    }
+}
+</code></pre>
+<p>In this example, the <code>BufferedReader</code> is declared within the <code>try</code> statement. It is automatically closed when the <code>try</code> block is exited, whether normally or due to an exception. This makes the code more concise and readable, and it prevents resource leaks.</p>
 <h2 id="common-exception-types"><a class="header" href="#common-exception-types">Common Exception Types</a></h2>
 <p>Java has a wide range of built-in exception types. Some of the most common ones you will encounter include <code>ArrayIndexOutOfBoundsException</code>, which occurs when you try to access an array with an invalid index; <code>NullPointerException</code>, which is thrown when you try to use a variable that is not pointing to any object; <code>ArithmeticException</code>, which indicates an exceptional arithmetic condition, such as dividing by zero; and <code>FileNotFoundException</code>, which is thrown when a specified file cannot be found.</p>
+<blockquote>
+<p>Custom exceptions can be created to handle domain-specific errors related to the software written.</p>
+</blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="collections"><a class="header" href="#collections">Collections</a></h1>
 <p>The Java Collections Framework is a sophisticated hierarchy of interfaces and classes designed to help you manage and represent collections of objects. It provides a unified architecture for storing and manipulating groups of data, offering a wide range of data structures to suit different needs.</p>
 <h2 id="arraylist"><a class="header" href="#arraylist"><code>ArrayList</code></a></h2>

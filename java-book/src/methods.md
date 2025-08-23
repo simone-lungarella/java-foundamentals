@@ -8,8 +8,8 @@ A method definition includes several components. It starts with an access modifi
 
 ```java
 public class MyClass {
-    // access_modifier return_type method_name(parameters)
-    public           void        greet(String name) {
+
+    public void greet(String name) {
         // Method body
         System.out.println("Hello, " + name);
     }
@@ -23,8 +23,8 @@ To execute a method, you typically need to create an object of the class to whic
 ```java
 public class Main {
     public static void main(String[] args) {
-        MyClass myObject = new MyClass(); // Create an object of MyClass
-        myObject.greet("Simone");         // Call the greet method
+        MyClass myObject = new MyClass(); // Create an instance of MyClass
+        myObject.greet("Mario");         // Call the greet method
     }
 }
 ```

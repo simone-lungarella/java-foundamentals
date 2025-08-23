@@ -36,7 +36,7 @@ public class Main {
 
 ### Importing an Entire Package
 
-If you need to use multiple classes from the same package, you can import all of them at once using the `*` wildcard.
+If you need to use multiple classes from the same package, Java allows to import all of them at once using the `*` wildcard, although it is considered bad practice.
 
 ```java
 import java.util.*;
@@ -53,3 +53,4 @@ public class Main {
 ## Built-in Packages
 
 Java provides a rich standard library organized into numerous built-in packages. Some of the most frequently used packages include `java.lang`, which contains fundamental classes and is automatically imported into every Java program; `java.util`, which provides the collections framework and other utility classes; `java.io` for input and output operations; `java.net` for networking; and `java.awt` for creating graphical user interfaces.
+

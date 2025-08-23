@@ -181,7 +181,7 @@
 <p>An interface is defined using the <code>interface</code> keyword. The methods declared in an interface are abstract by default, meaning they do not have a body. Similarly, any attributes declared in an interface are automatically <code>public</code>, <code>static</code>, and <code>final</code>.</p>
 <pre><code class="language-java">interface Animal {
     // These methods are implicitly public and abstract
-    void animalSound();
+    void emitSound();
     void sleep();
 }
 </code></pre>
@@ -189,8 +189,8 @@
 <p>A class can implement an interface using the <code>implements</code> keyword. When a class implements an interface, it must provide a concrete implementation for all the methods declared in that interface. This ensures that the class adheres to the contract defined by the interface.</p>
 <pre><code class="language-java">// The Pig class implements the Animal interface
 class Pig implements Animal {
-    // Provide an implementation for the animalSound method
-    public void animalSound() {
+    // Provide an implementation for the emitSound method
+    public void emitSound() {
         System.out.println("The pig says: wee wee");
     }
 
@@ -203,7 +203,7 @@ class Pig implements Animal {
 class Main {
     public static void main(String[] args) {
         Pig myPig = new Pig();
-        myPig.animalSound();
+        myPig.emitSound();
         myPig.sleep();
     }
 }
