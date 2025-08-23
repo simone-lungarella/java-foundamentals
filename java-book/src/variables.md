@@ -20,7 +20,7 @@ char grade = 'A';
 In addition to primitive types, Java has reference types, which are used to refer to objects. The most common reference type is `String`, which is used for sequences of characters. Unlike primitive types, reference types are typically created with the `new` keyword, although `String` has special support that allows for simpler initialization.
 
 ```java
-String name = "Simone";
+String name = "Mario";
 ```
 
 ## Declaring and Initializing
