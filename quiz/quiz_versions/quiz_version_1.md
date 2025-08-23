@@ -14,94 +14,23 @@ Assicurati di inserire i tuoi dati personali negli spazi indicati sopra prima di
 
 ---
 
-## Q1. Quale metodo può essere usato per creare una nuova istanza di un oggetto?
+## Q1. Quale istruzione restituisce true se "firstName" è di tipo String?
 
 
-- [ ] un costruttore
-- [ ] un metodo creatore
-- [ ] metodo privato
-- [ ] un'altra istanza
+- [ ] `"firstName".getType() == String`
+- [ ] `"firstName".getType().equals("String")`
+- [ ] `"firstName".getClass().getSimpleName() == "String"`
+- [ ] `"firstName" instanceof String`
 
-## Q2. Qual è l'espressione più affidabile per testare se i valori di due variabili di tipo `String` sono uguali?
-
-
-- [ ] string1.matches(string2)
-- [ ] string1.equals(string2)
-- [ ] string1 == string2
-- [ ] string1 = string2
-
-## Q3. Completa il codice per verificare se `number` è divisibile per `5`:
-
-`boolean isDivisibleBy5 = _____;`
-
-
-- [ ] `number / 5 ? true : false`
-- [ ] `number % 5 == 0`
-- [ ] `number % 5 != 5`
-- [ ] `Math.isDivisible(number, 5)`
-
-## Q4. Quale firma del metodo definisce la funzione chiamata?
-
-`boolean healthyOrNot = isHealthy("avocado");`
-
-
-- [ ] boolean isHealthy(String string);
-- [ ] private String isHealthy(String food);
-- [ ] public boolean isHealthy("avocado");
-- [ ] public void isHealthy(String avocado);
-
-## Q5. Data la stringa "strawberries" salvata in una variabile chiamata fruit, cosa restituirebbe `fruit.substring(2, 5)`?
+## Q2. Data la stringa "strawberries" salvata in una variabile chiamata fruit, cosa restituirebbe `fruit.substring(2, 5)`?
 
 
 - [ ] traw
+- [ ] rawb
 - [ ] awb
 - [ ] raw
-- [ ] rawb
 
-## Q6. Quale istruzione restituisce true se "firstName" è di tipo String?
-
-
-- [ ] `"firstName".getClass().getSimpleName() == "String"`
-- [ ] `"firstName" instanceof String`
-- [ ] `"firstName".getType() == String`
-- [ ] `"firstName".getType().equals("String")`
-
-## Q7. La programmazione orientata agli oggetti è un paradigma in cui i programmi sono organizzati attorno a \_ e dati, piuttosto che a \_ e logica.
-
-
-- [ ] funzioni; azioni
-- [ ] azioni; funzioni
-- [ ] oggetti; azioni
-- [ ] azioni; oggetti
-
-## Q8. Quante volte, questo programma, stamperà `"Hello World!"`?
-
-```java
-class Main {
-    public static void main(String[] args){
-        for (int i = 0; i < 10; i++){
-            System.out.println("Hello World!");
-        }
-    }
-}
-```
-
-## Q9. Quale modificatore rende una variabile immutabile in Java?
-
-- [ ] static
-- [ ] final
-- [ ] const
-- [ ] nessuno, gli oggetti sono immutabili per default in Java
-
-## Q10. Come si può ottenere il polimorfismo a runtime in Java?
-
-
-- [ ] overriding del metodo
-- [ ] overloading del metodo
-- [ ] chiamata del metodo
-- [ ] overrunning del metodo
-
-## Q11. Istruzioni per la compilazione
+## Q3. Istruzioni per la compilazione
 
 **Nome:** ________________  
 **Cognome:** ________________  
@@ -113,26 +42,86 @@ Assicurati di inserire i tuoi dati personali negli spazi indicati sopra prima di
 
 ---
 
-- [x] Questa è la risposta corretta
 - [ ] Questa è una risposta sbagliata
+- [x] Questa è la risposta corretta
 
-## Q12. Quale modificatore di accesso applica l'incapsulamento impedendo l'accesso diretto alle proprietà di una classe dall'esterno della classe (eccetto attraverso i metodi della classe stessa)?
+## Q4. Come si scrive un ciclo for-each che itera su ArrayList\<Pencil\>pencilCase?
 
 
-- [ ] public
-- [ ] (default) nessun modificatore
+- [ ] `for (pencilCase.next()) {}`
+- [ ] `for (Pencil pencil : pencilCase.iterator()) {}`
+- [ ] `for (Pencil pencil : pencilCase) {}`
+- [ ] `for (pencil in pencilCase) {}`
+
+## Q5. Quale metodo può essere usato per creare una nuova istanza di un oggetto?
+
+
+- [ ] un costruttore
+- [ ] metodo privato
+- [ ] un metodo creatore
+- [ ] un'altra istanza
+
+## Q6. Quale modificatore di accesso applica l'incapsulamento impedendo l'accesso diretto alle proprietà di una classe dall'esterno della classe (eccetto attraverso i metodi della classe stessa)?
+
+
 - [ ] private
+- [ ] public
 - [ ] protected
+- [ ] (default) nessun modificatore
 
-## Q13. Perché l'affermazione *"Una classe anonima richiede un costruttore senza argomenti"* è falsa?
+## Q7. Il sistema di runtime avvia il tuo programma chiamando per prima quale funzione?
+
+
+- [ ] main
+- [ ] start
+- [ ] print
+- [ ] iterative
+
+## Q8. Completa il codice per verificare se `number` è divisibile per `5`:
+
+`boolean isDivisibleBy5 = _____;`
+
+
+- [ ] `number % 5 != 5`
+- [ ] `Math.isDivisible(number, 5)`
+- [ ] `number / 5 ? true : false`
+- [ ] `number % 5 == 0`
+
+## Q9. Quale codice useresti nel Costruttore A per chiamare il Costruttore B?
+
+```java
+public class Jedi {
+
+  /* Costruttore A */
+  Jedi(String name, String species){}
+
+  /* Costruttore B */
+  Jedi(String name, String species, boolean followsTheDarkSide){}
+}
+```
+
+
+- [ ] this(name, species, false)
+- [ ] super(name, species, false)
+- [ ] Jedi(name, species, false)
+- [ ] new Jedi(name, species, false)
+
+## Q10. Quale modificatore rende una variabile immutabile in Java?
+
+- [ ] const
+- [ ] final
+- [ ] static
+- [ ] nessuno, gli oggetti sono immutabili per default in Java
+
+## Q11. Perché l'affermazione *"Una classe anonima richiede un costruttore senza argomenti"* è falsa?
 
 
 - [ ] Perché puoi dichiarare il tuo costruttore parametrizzato all'interno del corpo della classe anonima.
-- [ ] Perché le classi anonime usano sempre il costruttore senza argomenti di `Object` indipendentemente dalla superclasse.
-- [ ] Perché le classi anonime non chiamano mai alcun costruttore; si basano interamente sui blocchi di inizializzazione delle istanze.
 - [ ] Perché l'espressione `new SuperType(...)` invoca un costruttore della superclasse, e puoi passare qualsiasi argomento richiesto (ad es., `new Foo(42) { ... }`), quindi un costruttore senza argomenti non è necessario.
+- [ ] Perché le classi anonime non chiamano mai alcun costruttore; si basano interamente sui blocchi di inizializzazione delle istanze.
+- [ ] Perché le classi anonime usano sempre il costruttore senza argomenti di `Object` indipendentemente dalla superclasse.
 
-## Q14. Quali lettere verranno stampate all'esecuzione del seguente programma?
+## Q12. Quali lettere verranno stampate all'esecuzione del seguente programma?
 
 ```java
 public static void main(String[] args) {
@@ -154,41 +143,58 @@ public static void badMethod() {
 
 
 - [ ] C e D
+- [ ] A, B e D
 - [ ] A, C e D
 - [ ] A e D
-- [ ] A, B e D
 
-## Q15. Quale codice useresti nel Costruttore A per chiamare il Costruttore B?
+## Q13. Quale firma del metodo definisce la funzione chiamata?
+
+`boolean healthyOrNot = isHealthy("avocado");`
+
+
+- [ ] boolean isHealthy(String string);
+- [ ] private String isHealthy(String food);
+- [ ] public void isHealthy(String avocado);
+- [ ] public boolean isHealthy("avocado");
+
+## Q14. Qual è l'espressione più affidabile per testare se i valori di due variabili di tipo `String` sono uguali?
+
+
+- [ ] string1 == string2
+- [ ] string1.equals(string2)
+- [ ] string1 = string2
+- [ ] string1.matches(string2)
+
+## Q15. La programmazione orientata agli oggetti è un paradigma in cui i programmi sono organizzati attorno a \_ e dati, piuttosto che a \_ e logica.
+
+
+- [ ] oggetti; azioni
+- [ ] azioni; oggetti
+- [ ] azioni; funzioni
+- [ ] funzioni; azioni
+
+## Q16. Quante volte, questo programma, stamperà `"Hello World!"`?
 
 ```java
-public class Jedi {
-
-  /* Costruttore A */
-  Jedi(String name, String species){}
-
-  /* Costruttore B */
-  Jedi(String name, String species, boolean followsTheDarkSide){}
+class Main {
+    public static void main(String[] args){
+        for (int i = 0; i < 10; i++){
+            System.out.println("Hello World!");
+        }
+    }
 }
 ```
 
 
-- [ ] new Jedi(name, species, false)
-- [ ] super(name, species, false)
-- [ ] this(name, species, false)
-- [ ] Jedi(name, species, false)
+- [ ] 5 times
+- [ ] infinite number of times
+- [ ] 10 times
+- [ ] 9 times
 
-## Q16. Come si scrive un ciclo for-each che itera su ArrayList\<Pencil\>pencilCase?
-
-
-- [ ] `for (Pencil pencil : pencilCase) {}`
-- [ ] `for (Pencil pencil : pencilCase.iterator()) {}`
-- [ ] `for (pencil in pencilCase) {}`
-- [ ] `for (pencilCase.next()) {}`
-
-## Q17. Il sistema di runtime avvia il tuo programma chiamando per prima quale funzione?
+## Q17. Come si può ottenere il polimorfismo a runtime in Java?
 
 
-- [ ] start
-- [ ] iterative
-- [ ] print
-- [ ] main
+- [ ] overloading del metodo
+- [ ] chiamata del metodo
+- [ ] overriding del metodo
+- [ ] overrunning del metodo

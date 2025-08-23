@@ -129,7 +129,21 @@ generate_version() {
     fi
     
     # Generate the quiz
-    echo "# Quiz Version $version_num" > "$output_file"
+    echo "# Valutazione 1 — Java" >> "$output_file"
+    echo "" >> "$output_file"
+    echo "## Istruzioni per la compilazione" >> "$output_file"
+    echo "" >> "$output_file"
+    echo "**Nome:** ________________  " >> "$output_file"
+    echo "**Cognome:** ________________  " >> "$output_file"
+    echo "**Data:** ________________" >> "$output_file"
+    echo "" >> "$output_file"
+    echo "Per completare questa valutazione, edita direttamente questo file markdown inserendo una **x** tra le parentesi quadre della risposta corretta per ogni domanda. Ad esempio:" >> "$output_file"
+    echo "- [x] Questa è la risposta corretta" >> "$output_file"
+    echo "- [ ] Questa è una risposta sbagliata" >> "$output_file"
+    echo "" >> "$output_file"
+    echo "Assicurati di inserire i tuoi dati personali negli spazi indicati sopra prima di iniziare. Salva il file una volta completato e consegnalo secondo le modalità indicate dal docente." >> "$output_file"
+    echo "" >> "$output_file"
+    echo "---" >> "$output_file"
     echo "" >> "$output_file"
     
     local q_num=1

@@ -63,6 +63,11 @@ class Main {
 }
 ```
 
+- [ ] 10 times
+- [ ] 9 times
+- [ ] 5 times
+- [ ] infinite number of times
+
 ## Il sistema di runtime avvia il tuo programma chiamando per prima quale funzione?
 
 - [ ] print

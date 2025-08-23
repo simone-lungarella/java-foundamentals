@@ -216,9 +216,9 @@ Per usare classi di altri pacchetti, si usa `import java.util.List;`.
 
 ## Approfondimento Java
 
-Per approfondire i concetti introdotti, consultare il videocorso Udemy o risorse alternative quali [www.baeldung.com](https://www.baeldung.com):
+Per approfondire i concetti introdotti, consultare il videocorso Udemy o la documentazione ufficiale:
 
-- [Le basi di Java in forma scritta (www.baeldung.com/get-started-with-java-series)](https://www.baeldung.com/get-started-with-java-series);
+- [Documentazione ufficiale — Oracle (https://docs.oracle.com/javase/tutorial/index.html)](https://docs.oracle.com/javase/tutorial/index.html);
 - [Videocorso Udemy](https://yourlearning.ibm.com/activity/UDEMY-5099336);
 
 \newpage
