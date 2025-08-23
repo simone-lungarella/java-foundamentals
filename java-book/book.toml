@@ -5,4 +5,4 @@ src = "src"
 title = "Application development with Java"
 
 [build]
-build-dir = "docs"
+build-dir = "../docs"
