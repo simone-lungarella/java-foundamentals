@@ -1,32 +1,37 @@
 # Summary
 
-- [Introduction](./introduction.md)
+[Introduction](./introduction.md)
 - [Getting Started](./getting_started.md)
 
 ---
 
-## I. The Java Language
+## I. Java Core Concepts
 
-- [Java Basics](./basics.md)
+- [Java Core Concepts](./java_core_concepts.md)
     - [Variables](./variables.md)
     - [Control Flow](./control_flow.md)
     - [Methods](./methods.md)
+    - [Classes and Objects](./classes_objects.md)
+    - [Enums](./enums.md)
 
 ---
 
 ## II. Object-Oriented Programming
 
-- [Introduction to OOP](./oop.md)
-    - [Classes and Objects](./classes_objects.md)
+- [Object-Oriented Programming](./object_oriented_programming.md)
     - [Inheritance](./inheritance.md)
     - [Interfaces](./interfaces.md)
+    - [Abstract Classes](./abstract_classes.md)
+    - [Packages](./packages.md)
 
 ---
 
-## III. Advanced Topics
+## III. Advanced Java
 
-- [Java—Advanced Topics](./advanced-java.md)
-    - [Packages](./packages.md)
+- [Advanced Java](./advanced-java.md)
     - [Exceptions](./exceptions.md)
     - [Collections](./collections.md)
     - [Streams](./streams.md)
+    - [Generics](./generics.md)
+    - [File I/O](./file_io.md)
+    - [Threads](./threads.md)

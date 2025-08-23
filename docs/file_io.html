@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Packages - Application development with Java</title>
+        <title>File I/O - Application development with Java</title>
 
 
         <!-- Custom HTML head -->
@@ -175,54 +175,55 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="packages"><a class="header" href="#packages">Packages</a></h1>
-<p>In Java, packages are used to group related classes and interfaces into a single namespace. They are analogous to folders in a file directory and are a crucial mechanism for organizing code, preventing naming conflicts, and improving code maintainability.</p>
-<h2 id="creating-a-package"><a class="header" href="#creating-a-package">Creating a Package</a></h2>
-<p>To place a class within a package, you use the <code>package</code> keyword at the very beginning of your Java source file. The package name typically follows a hierarchical naming pattern. For example, to create a package named <code>com.example.myapp</code>, you would have a corresponding directory structure <code>src/com/example/myapp</code>, and the Java files within that directory would start with the <code>package com.example.myapp;</code> declaration.</p>
-<pre><code class="language-java">// This file would be located at src/com/example/myapp/MyClass.java
-package com.example.myapp;
+                        <h1 id="file-io"><a class="header" href="#file-io">File I/O</a></h1>
+<p>File I/O (Input/Output) in Java is used to read from and write to files. The <code>java.io</code> package provides a set of classes for handling file operations.</p>
+<h2 id="reading-a-file"><a class="header" href="#reading-a-file">Reading a File</a></h2>
+<p>You can use the <code>BufferedReader</code> class to read a file line by line.</p>
+<pre><code class="language-java">import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
-public class MyClass {
-    // ...
-}
-</code></pre>
-<h2 id="using-a-class-from-another-package"><a class="header" href="#using-a-class-from-another-package">Using a Class from Another Package</a></h2>
-<p>To use a class that resides in a different package, you must first import it using the <code>import</code> keyword. You have the option to import a single, specific class or all the classes within a package.</p>
-<h3 id="importing-a-single-class"><a class="header" href="#importing-a-single-class">Importing a Single Class</a></h3>
-<p>To import a specific class, you provide its fully qualified name in the <code>import</code> statement.</p>
-<pre><code class="language-java">import java.util.Scanner;
-
-public class Main {
+public class ReadFileExample {
     public static void main(String[] args) {
-        Scanner myScanner = new Scanner(System.in);
-        // ...
+        try (BufferedReader reader = new BufferedReader(new FileReader("example.txt"))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
 </code></pre>
-<h3 id="importing-an-entire-package"><a class="header" href="#importing-an-entire-package">Importing an Entire Package</a></h3>
-<p>If you need to use multiple classes from the same package, Java allows to import all of them at once using the <code>*</code> wildcard, although it is considered bad practice.</p>
-<pre><code class="language-java">import java.util.*;
+<h2 id="writing-to-a-file"><a class="header" href="#writing-to-a-file">Writing to a File</a></h2>
+<p>You can use the <code>BufferedWriter</code> class to write to a file.</p>
+<pre><code class="language-java">import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 
-public class Main {
+public class WriteFileExample {
     public static void main(String[] args) {
-        ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
-        Scanner myScanner = new Scanner(System.in);
-        // ...
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"))) {
+            writer.write("Hello, World!");
+            writer.newLine();
+            writer.write("This is a new line.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
 </code></pre>
-<h2 id="built-in-packages"><a class="header" href="#built-in-packages">Built-in Packages</a></h2>
-<p>Java provides a rich standard library organized into numerous built-in packages. Some of the most frequently used packages include <code>java.lang</code>, which contains fundamental classes and is automatically imported into every Java program; <code>java.util</code>, which provides the collections framework and other utility classes; <code>java.io</code> for input and output operations; <code>java.net</code> for networking; and <code>java.awt</code> for creating graphical user interfaces.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="abstract_classes.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="generics.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="advanced-java.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="threads.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -232,11 +233,11 @@ public class Main {
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="abstract_classes.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="generics.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="advanced-java.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="threads.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

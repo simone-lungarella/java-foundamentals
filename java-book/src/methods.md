@@ -42,6 +42,15 @@ public int add(int a, int b) {
 int sum = add(5, 10); // The variable 'sum' will be assigned the value 15
 ```
 
+## Pass by Value vs. Pass by Reference
+
+When passing arguments to methods, it's important to understand that Java is strictly a **pass-by-value** language. This means that when a method is called, a copy of the value of each argument is passed to the method's parameters.
+
+- **For primitive types** (like `int`, `double`, `boolean`), the value itself is copied. Any changes made to the parameter inside the method will not affect the original variable outside the method.
+
+- **For object types**, the value being passed is the reference to the object, not the object itself. This reference is also passed by value, meaning a copy of the reference is created. As a result, the method can modify the object's internal state, and these changes will be reflected outside the method. However, if the method reassigns the parameter to a new object, this will not affect the original object reference.
+
+
 ## Return Values
 
 Methods can return a value to the caller using the `return` keyword. The data type of the returned value must match the method's declared return type. If a method is declared with a `void` return type, it does not return a value and the `return` keyword is used only to exit the method.

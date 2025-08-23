@@ -205,6 +205,16 @@
 // To call this method:
 int sum = add(5, 10); // The variable 'sum' will be assigned the value 15
 </code></pre>
+<h2 id="pass-by-value-vs-pass-by-reference"><a class="header" href="#pass-by-value-vs-pass-by-reference">Pass by Value vs. Pass by Reference</a></h2>
+<p>When passing arguments to methods, it's important to understand that Java is strictly a <strong>pass-by-value</strong> language. This means that when a method is called, a copy of the value of each argument is passed to the method's parameters.</p>
+<ul>
+<li>
+<p><strong>For primitive types</strong> (like <code>int</code>, <code>double</code>, <code>boolean</code>), the value itself is copied. Any changes made to the parameter inside the method will not affect the original variable outside the method.</p>
+</li>
+<li>
+<p><strong>For object types</strong>, the value being passed is the reference to the object, not the object itself. This reference is also passed by value, meaning a copy of the reference is created. As a result, the method can modify the object's internal state, and these changes will be reflected outside the method. However, if the method reassigns the parameter to a new object, this will not affect the original object reference.</p>
+</li>
+</ul>
 <h2 id="return-values"><a class="header" href="#return-values">Return Values</a></h2>
 <p>Methods can return a value to the caller using the <code>return</code> keyword. The data type of the returned value must match the method's declared return type. If a method is declared with a <code>void</code> return type, it does not return a value and the <code>return</code> keyword is used only to exit the method.</p>
 <pre><code class="language-java">// This method returns a String
@@ -226,7 +236,7 @@ public void printMessage() {
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="oop.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="classes_objects.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -240,7 +250,7 @@ public void printMessage() {
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="oop.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="classes_objects.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

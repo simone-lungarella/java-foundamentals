@@ -359,6 +359,16 @@ do {
 // To call this method:
 int sum = add(5, 10); // The variable 'sum' will be assigned the value 15
 </code></pre>
+<h2 id="pass-by-value-vs-pass-by-reference"><a class="header" href="#pass-by-value-vs-pass-by-reference">Pass by Value vs. Pass by Reference</a></h2>
+<p>When passing arguments to methods, it's important to understand that Java is strictly a <strong>pass-by-value</strong> language. This means that when a method is called, a copy of the value of each argument is passed to the method's parameters.</p>
+<ul>
+<li>
+<p><strong>For primitive types</strong> (like <code>int</code>, <code>double</code>, <code>boolean</code>), the value itself is copied. Any changes made to the parameter inside the method will not affect the original variable outside the method.</p>
+</li>
+<li>
+<p><strong>For object types</strong>, the value being passed is the reference to the object, not the object itself. This reference is also passed by value, meaning a copy of the reference is created. As a result, the method can modify the object's internal state, and these changes will be reflected outside the method. However, if the method reassigns the parameter to a new object, this will not affect the original object reference.</p>
+</li>
+</ul>
 <h2 id="return-values"><a class="header" href="#return-values">Return Values</a></h2>
 <p>Methods can return a value to the caller using the <code>return</code> keyword. The data type of the returned value must match the method's declared return type. If a method is declared with a <code>void</code> return type, it does not return a value and the <code>return</code> keyword is used only to exit the method.</p>
 <pre><code class="language-java">// This method returns a String
@@ -371,15 +381,6 @@ public void printMessage() {
     System.out.println("This is a message.");
 }
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="object-oriented-programming"><a class="header" href="#object-oriented-programming">Object-Oriented Programming</a></h1>
-<p>Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects", which can contain data in the form of fields (often known as attributes or properties) and code in the form of procedures (often known as methods).</p>
-<p>This section will introduce you to the core principles of OOP in Java. We will cover:</p>
-<ul>
-<li><strong>Classes and Objects</strong>: The fundamental building blocks of OOP.</li>
-<li><strong>Inheritance</strong>: How to create new classes from existing ones.</li>
-<li><strong>Interfaces</strong>: How to achieve abstraction and multiple inheritance in Java.</li>
-</ul>
-<p>By the end of this section, you will have a solid understanding of how to structure your Java programs in an object-oriented way.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="classes-and-objects"><a class="header" href="#classes-and-objects">Classes and Objects</a></h1>
 <p>Classes and objects are the foundational concepts of Object-Oriented Programming (OOP). A <strong>class</strong> can be thought of as a blueprint for creating objects. It defines a set of properties, known as fields, and behaviors, known as methods, that will be common to all objects of that type. An <strong>object</strong>, in turn, is a specific instance of a class.</p>
 <h2 id="defining-a-class"><a class="header" href="#defining-a-class">Defining a Class</a></h2>
@@ -435,6 +436,46 @@ public void printMessage() {
     }
 }
 </code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="enums"><a class="header" href="#enums">Enums</a></h1>
+<p>In Java, an enum is a special data type that represents a fixed set of constant values. Enums are useful when you have a variable that can only take one of a small set of possible values, such as the days of the week or the seasons of the year.</p>
+<h2 id="defining-an-enum"><a class="header" href="#defining-an-enum">Defining an Enum</a></h2>
+<p>To define an enum, you use the <code>enum</code> keyword. The enum values are listed in uppercase letters.</p>
+<pre><code class="language-java">public enum Day {
+    SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY
+}
+</code></pre>
+<h2 id="using-an-enum"><a class="header" href="#using-an-enum">Using an Enum</a></h2>
+<p>You can use an enum in a <code>switch</code> statement to execute different code for each enum value.</p>
+<pre><code class="language-java">public class EnumExample {
+    public static void main(String[] args) {
+        Day today = Day.WEDNESDAY;
+
+        switch (today) {
+            case MONDAY:
+                System.out.println("Mondays are bad.");
+                break;
+            case FRIDAY:
+                System.out.println("Fridays are better.");
+                break;
+            case SATURDAY: case SUNDAY:
+                System.out.println("Weekends are best.");
+                break;
+            default:
+                System.out.println("Midweek days are so-so.");
+                break;
+        }
+    }
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="object-oriented-programming"><a class="header" href="#object-oriented-programming">Object-Oriented Programming</a></h1>
+<p>Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects", which can contain data in the form of fields (often known as attributes or properties) and code in the form of procedures (often known as methods).</p>
+<p>This section will introduce you to the core principles of OOP in Java. We will cover:</p>
+<ul>
+<li><strong>Classes and Objects</strong>: The fundamental building blocks of OOP.</li>
+<li><strong>Inheritance</strong>: How to create new classes from existing ones.</li>
+<li><strong>Interfaces</strong>: How to achieve abstraction and multiple inheritance in Java.</li>
+</ul>
+<p>By the end of this section, you will have a solid understanding of how to structure your Java programs in an object-oriented way.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="inheritance"><a class="header" href="#inheritance">Inheritance</a></h1>
 <p>Inheritance is a fundamental concept in object-oriented programming that allows a new class, known as a subclass, to inherit the properties and behaviors (fields and methods) of an existing class, referred to as a superclass. This powerful mechanism is a cornerstone of code reuse, as it allows you to build upon existing, proven code.</p>
 <h2 id="superclass-and-subclass"><a class="header" href="#superclass-and-subclass">Superclass and Subclass</a></h2>
@@ -528,16 +569,28 @@ class Main {
 <p>Interfaces and classes have some fundamental differences. An interface cannot be instantiated, meaning you cannot create an object of an interface type. Also, as mentioned, the methods in an interface do not have a body. A key advantage of interfaces is that a class can implement multiple interfaces, whereas it can only extend a single superclass.</p>
 <h2 id="why-use-interfaces"><a class="header" href="#why-use-interfaces">Why Use Interfaces?</a></h2>
 <p>Interfaces are a powerful feature in Java for several reasons. They are a key mechanism for achieving abstraction, by separating the definition of a method from its implementation. They also provide a way to achieve a form of multiple inheritance, as a class can implement any number of interfaces. Finally, interfaces help in achieving loose coupling, making your code more modular and easier to maintain.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="advanced-topics"><a class="header" href="#advanced-topics">Advanced Topics</a></h1>
-<p>This section delves into more advanced topics in Java that are essential for building robust and scalable applications. We will cover a range of concepts that will help you write more professional and efficient code.</p>
-<p>In this section, you will learn about:</p>
-<ul>
-<li><strong>Packages</strong>: How to organize your code into logical units.</li>
-<li><strong>Exceptions</strong>: How to handle errors and exceptional situations in your programs.</li>
-<li><strong>Collections</strong>: The Java Collections Framework for working with groups of objects.</li>
-<li><strong>Streams</strong>: A powerful API for processing sequences of elements.</li>
-</ul>
-<p>By mastering these topics, you will be well-equipped to tackle more complex programming challenges in Java.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="abstract-classes"><a class="header" href="#abstract-classes">Abstract Classes</a></h1>
+<p>In Java, an abstract class is a class that cannot be instantiated on its own and must be subclassed. It serves as a blueprint for other classes, providing a common interface and shared implementation. Abstract classes are declared with the <code>abstract</code> keyword.</p>
+<h2 id="abstract-methods"><a class="header" href="#abstract-methods">Abstract Methods</a></h2>
+<p>An abstract class can contain abstract methods, which are methods that are declared without an implementation. Subclasses are required to provide an implementation for these methods.</p>
+<pre><code class="language-java">public abstract class Animal {
+    // Abstract method (does not have a body)
+    public abstract void makeSound();
+
+    // Regular method
+    public void sleep() {
+        System.out.println("Zzz");
+    }
+}
+</code></pre>
+<h2 id="subclassing-an-abstract-class"><a class="header" href="#subclassing-an-abstract-class">Subclassing an Abstract Class</a></h2>
+<p>To use an abstract class, you must create a subclass that extends it. The subclass must provide an implementation for all of the abstract methods in the parent class.</p>
+<pre><code class="language-java">public class Dog extends Animal {
+    public void makeSound() {
+        System.out.println("Woof");
+    }
+}
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="packages"><a class="header" href="#packages">Packages</a></h1>
 <p>In Java, packages are used to group related classes and interfaces into a single namespace. They are analogous to folders in a file directory and are a crucial mechanism for organizing code, preventing naming conflicts, and improving code maintainability.</p>
 <h2 id="creating-a-package"><a class="header" href="#creating-a-package">Creating a Package</a></h2>
@@ -576,6 +629,16 @@ public class Main {
 </code></pre>
 <h2 id="built-in-packages"><a class="header" href="#built-in-packages">Built-in Packages</a></h2>
 <p>Java provides a rich standard library organized into numerous built-in packages. Some of the most frequently used packages include <code>java.lang</code>, which contains fundamental classes and is automatically imported into every Java program; <code>java.util</code>, which provides the collections framework and other utility classes; <code>java.io</code> for input and output operations; <code>java.net</code> for networking; and <code>java.awt</code> for creating graphical user interfaces.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="advanced-topics"><a class="header" href="#advanced-topics">Advanced Topics</a></h1>
+<p>This section delves into more advanced topics in Java that are essential for building robust and scalable applications. We will cover a range of concepts that will help you write more professional and efficient code.</p>
+<p>In this section, you will learn about:</p>
+<ul>
+<li><strong>Packages</strong>: How to organize your code into logical units.</li>
+<li><strong>Exceptions</strong>: How to handle errors and exceptional situations in your programs.</li>
+<li><strong>Collections</strong>: The Java Collections Framework for working with groups of objects.</li>
+<li><strong>Streams</strong>: A powerful API for processing sequences of elements.</li>
+</ul>
+<p>By mastering these topics, you will be well-equipped to tackle more complex programming challenges in Java.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="exceptions"><a class="header" href="#exceptions">Exceptions</a></h1>
 <p>In Java, an exception is an event that occurs during the execution of a program and disrupts its normal flow. When an error is encountered within a method, the method creates an exception object, which contains information about the error, and hands it off to the runtime system.</p>
 <h2 id="exception-handling"><a class="header" href="#exception-handling">Exception Handling</a></h2>
@@ -761,6 +824,105 @@ List&lt;String&gt; aNames = names.stream()
 int sum = numbers.stream()
                  .reduce(0, (a, b) -&gt; a + b);
 // The 'sum' variable will hold the value 15
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="generics"><a class="header" href="#generics">Generics</a></h1>
+<p>Generics in Java allow you to create classes, interfaces, and methods that can work with any data type. This provides compile-time type safety and reduces the need for type casting.</p>
+<h2 id="generic-class"><a class="header" href="#generic-class">Generic Class</a></h2>
+<p>You can create a generic class by specifying a type parameter in angle brackets (<code>&lt;&gt;</code>).</p>
+<pre><code class="language-java">public class Box&lt;T&gt; {
+    private T t;
+
+    public void set(T t) {
+        this.t = t;
+    }
+
+    public T get() {
+        return t;
+    }
+}
+</code></pre>
+<h2 id="using-a-generic-class"><a class="header" href="#using-a-generic-class">Using a Generic Class</a></h2>
+<p>When you create an instance of a generic class, you specify the actual type that the generic type will be replaced with.</p>
+<pre><code class="language-java">public class Main {
+    public static void main(String[] args) {
+        Box&lt;Integer&gt; integerBox = new Box&lt;Integer&gt;();
+        integerBox.set(10);
+        Integer someInteger = integerBox.get();
+        System.out.println(someInteger);
+
+        Box&lt;String&gt; stringBox = new Box&lt;String&gt;();
+        stringBox.set("Hello World");
+        String someString = stringBox.get();
+        System.out.println(someString);
+    }
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="file-io"><a class="header" href="#file-io">File I/O</a></h1>
+<p>File I/O (Input/Output) in Java is used to read from and write to files. The <code>java.io</code> package provides a set of classes for handling file operations.</p>
+<h2 id="reading-a-file"><a class="header" href="#reading-a-file">Reading a File</a></h2>
+<p>You can use the <code>BufferedReader</code> class to read a file line by line.</p>
+<pre><code class="language-java">import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class ReadFileExample {
+    public static void main(String[] args) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("example.txt"))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+</code></pre>
+<h2 id="writing-to-a-file"><a class="header" href="#writing-to-a-file">Writing to a File</a></h2>
+<p>You can use the <code>BufferedWriter</code> class to write to a file.</p>
+<pre><code class="language-java">import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class WriteFileExample {
+    public static void main(String[] args) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"))) {
+            writer.write("Hello, World!");
+            writer.newLine();
+            writer.write("This is a new line.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="threads"><a class="header" href="#threads">Threads</a></h1>
+<p>Threads allow a program to perform multiple tasks concurrently. In Java, you can create threads by extending the <code>Thread</code> class or implementing the <code>Runnable</code> interface.</p>
+<h2 id="extending-the-thread-class"><a class="header" href="#extending-the-thread-class">Extending the Thread Class</a></h2>
+<p>You can create a new thread by creating a subclass of <code>Thread</code> and overriding the <code>run()</code> method.</p>
+<pre><code class="language-java">public class MyThread extends Thread {
+    public void run() {
+        System.out.println("This code is running in a thread");
+    }
+
+    public static void main(String[] args) {
+        MyThread t1 = new MyThread();
+        t1.start();
+    }
+}
+</code></pre>
+<h2 id="implementing-the-runnable-interface"><a class="header" href="#implementing-the-runnable-interface">Implementing the Runnable Interface</a></h2>
+<p>The preferred way to create a thread is to implement the <code>Runnable</code> interface. This allows your class to extend other classes.</p>
+<pre><code class="language-java">public class MyRunnable implements Runnable {
+    public void run() {
+        System.out.println("This code is running in a thread");
+    }
+
+    public static void main(String[] args) {
+        Thread t1 = new Thread(new MyRunnable());
+        t1.start();
+    }
+}
 </code></pre>
 
                     </main>
