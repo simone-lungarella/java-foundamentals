@@ -39,4 +39,8 @@
 
 ---
 
+[Build Tools and Version Control](./build_tools_and_version_control.md)
+
+---
+
 [Useful Resources](./useful_resources.md)

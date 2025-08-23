@@ -956,11 +956,79 @@ public class WriteFileExample {
     }
 }
 </code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="build-tools-and-version-control"><a class="header" href="#build-tools-and-version-control">Build Tools and Version Control</a></h1>
+<p>In addition to the Java language itself, there are two other essential tools that every modern Java developer should know: a build tool and a version control system.</p>
+<h2 id="maven-the-build-tool"><a class="header" href="#maven-the-build-tool">Maven: The Build Tool</a></h2>
+<p><a href="https://maven.apache.org/">Maven</a> is a powerful build automation tool that is used to manage the lifecycle of a Java project. This includes compiling the source code, running tests, and packaging the application into a distributable format, such as a JAR file.</p>
+<h3 id="why-use-a-build-tool"><a class="header" href="#why-use-a-build-tool">Why Use a Build Tool?</a></h3>
+<p>In the early days of Java, developers had to manually manage the libraries and dependencies that their projects needed. This often led to a problem known as "JAR hell," where it was difficult to manage the correct versions of all the different JAR files that a project needed.</p>
+<p>Build tools like Maven solve this problem by automating the process of dependency management. You simply declare the dependencies that your project needs in the <code>pom.xml</code> file, and Maven will automatically download the correct versions of the JAR files and make them available to your project.</p>
+<p>This has several advantages:</p>
+<ul>
+<li><strong>Consistency:</strong> Everyone on the team uses the same versions of the dependencies.</li>
+<li><strong>Transitive Dependencies:</strong> Maven automatically handles transitive dependencies, which are the dependencies of your dependencies.</li>
+<li><strong>Reproducibility:</strong> The build process is reproducible, meaning that you can be confident that your project will build correctly on any machine.</li>
+</ul>
+<p>However, there are also some potential disadvantages to be aware of:</p>
+<ul>
+<li><strong>Transitive Dependency Conflicts:</strong> Sometimes, different dependencies can require different versions of the same transitive dependency. This can lead to conflicts that need to be resolved manually.</li>
+<li><strong>Complexity:</strong> For very simple projects, using a build tool like Maven can add unnecessary complexity.</li>
+</ul>
+<h3 id="a-simple-maven-project"><a class="header" href="#a-simple-maven-project">A Simple Maven Project</a></h3>
+<p>A Maven project is defined by a file called <code>pom.xml</code>, which is located in the root directory of the project. This file describes the project, its dependencies, and how to build it.</p>
+<p>Here is an example of a simple <code>pom.xml</code> file:</p>
+<pre><code class="language-xml">&lt;project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;groupId&gt;com.example&lt;/groupId&gt;
+    &lt;artifactId&gt;my-app&lt;/artifactId&gt;
+    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;junit&lt;/groupId&gt;
+            &lt;artifactId&gt;junit&lt;/artifactId&gt;
+            &lt;version&gt;4.12&lt;/version&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+&lt;/project&gt;
+</code></pre>
+<h3 id="building-a-project-with-maven"><a class="header" href="#building-a-project-with-maven">Building a Project with Maven</a></h3>
+<p>To build a project with Maven, you can use the following command:</p>
+<pre><code class="language-bash">mvn package
+</code></pre>
+<p>This command will compile the source code, run the tests, and package the application into a JAR file in the <code>target</code> directory.</p>
+<h2 id="git-the-version-control-system"><a class="header" href="#git-the-version-control-system">Git: The Version Control System</a></h2>
+<p><a href="https://git-scm.com/">Git</a> is a distributed version control system that is used to track changes to source code over time. It allows multiple developers to work on the same project simultaneously without overwriting each other's changes.</p>
+<h3 id="a-simple-git-workflow"><a class="header" href="#a-simple-git-workflow">A Simple Git Workflow</a></h3>
+<p>Here is a simple workflow for using Git:</p>
+<ol>
+<li>
+<p><strong>Initialize a repository:</strong> To start tracking a project with Git, you first need to initialize a repository in the root directory of the project:</p>
+<pre><code class="language-bash">git init
+</code></pre>
+</li>
+<li>
+<p><strong>Add files to the staging area:</strong> Next, you need to add the files that you want to track to the staging area:</p>
+<pre><code class="language-bash">git add .
+</code></pre>
+</li>
+<li>
+<p><strong>Commit the changes:</strong> Once the files are in the staging area, you can commit them to the repository:</p>
+<pre><code class="language-bash">git commit -m "Initial commit"
+</code></pre>
+</li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="useful-resources"><a class="header" href="#useful-resources">Useful Resources</a></h1>
 <p>This chapter provides a list of useful resources to help you continue your journey with Java.</p>
 <h2 id="official-documentation"><a class="header" href="#official-documentation">Official documentation</a></h2>
 <ul>
 <li><a href="https://docs.oracle.com/en/java/javase/17/docs/api/index.html">Oracle Java Documentation</a>: The official and most comprehensive resource for the Java programming language.</li>
+<li><a href="https://maven.apache.org/guides/index.html">Maven Documentation</a>: The official documentation for the Maven build tool.</li>
+<li><a href="https://git-scm.com/doc">Git Documentation</a>: The official documentation for the Git version control system.</li>
 <li><a href="https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html">Oracle's Java Naming Conventions</a>: A set of conventions to follow when naming your identifiers in Java.</li>
 <li><a href="https://google.github.io/styleguide/javaguide.html">Google Java Style Guide</a>: A complete guide to Google's coding standards for source code in the Java programming language.</li>
 </ul>

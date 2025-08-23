@@ -5,6 +5,8 @@ This chapter provides a list of useful resources to help you continue your journ
 ## Official documentation
 
 - [Oracle Java Documentation](https://docs.oracle.com/en/java/javase/17/docs/api/index.html): The official and most comprehensive resource for the Java programming language.
+- [Maven Documentation](https://maven.apache.org/guides/index.html): The official documentation for the Maven build tool.
+- [Git Documentation](https://git-scm.com/doc): The official documentation for the Git version control system.
 - [Oracle's Java Naming Conventions](https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html): A set of conventions to follow when naming your identifiers in Java.
 - [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html): A complete guide to Google's coding standards for source code in the Java programming language.
 
