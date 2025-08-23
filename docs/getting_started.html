@@ -178,13 +178,25 @@
                         <h1 id="getting-started"><a class="header" href="#getting-started">Getting Started</a></h1>
 <p>This chapter will guide you through setting up a streamlined Java development environment using Visual Studio Code (VS Code). By the end of this section, you will have a fully functional Java Development Kit (JDK), a VS Code installation, and the necessary extensions for a productive coding experience, including compiling and debugging.</p>
 <h2 id="1-install-visual-studio-code"><a class="header" href="#1-install-visual-studio-code">1. Install Visual Studio Code</a></h2>
-<p>The first step is to install Visual Studio Code. You can download it from the official website at <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>. Follow the installation instructions tailored to your operating system. For Windows, this involves running the downloaded <code>.exe</code> installer. On macOS, you will drag the VS Code application into your <code>Applications</code> folder. For Linux users, VS Code is available through most distribution package managers. For example, on Debian or Ubuntu, you can run <code>sudo apt update &amp;&amp; sudo apt install code</code>. Once the installation is complete, you can launch VS Code.</p>
+<p>The first step is to install Visual Studio Code. You can download it from the official website at <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>. Follow the installation instructions tailored to your operating system.</p>
+<ul>
+<li>For Windows, this involves running the downloaded <code>.exe</code> installer.</li>
+<li>On macOS, you will drag the VS Code application into your <code>Applications</code> folder.</li>
+<li>For Linux users, VS Code is available through most distribution package managers.</li>
+</ul>
 <h2 id="2-install-the-java-development-kit-jdk"><a class="header" href="#2-install-the-java-development-kit-jdk">2. Install the Java Development Kit (JDK)</a></h2>
-<p>To compile and run Java code, you need a Java Development Kit (JDK). You have the choice between Oracle JDK and OpenJDK, which is an open-source alternative favored by most developers. We recommend the OpenJDK builds from Adoptium, available at <a href="https://adoptium.net/">https://adoptium.net/</a>. Alternatively, you can find the Oracle JDK at <a href="https://www.oracle.com/java/technologies/downloads/">https://www.oracle.com/java/technologies/downloads/</a>.</p>
-<p>The installation process varies by operating system. On Windows and macOS, you can simply run the installer from the download page. For Linux distributions like Ubuntu or Debian, you can install the default JDK by running <code>sudo apt update &amp;&amp; sudo apt install default-jdk</code>.</p>
-<p>To confirm that the JDK was installed correctly, open a terminal and execute the command <code>java -version</code>. You should see output that displays the OpenJDK version, such as <code>openjdk version "21"</code>.</p>
+<p>To compile and run Java code, you need a Java Development Kit (JDK). You have the choice between Oracle JDK and OpenJDK, which is an open-source alternative favored by most developers. We recommend the OpenJDK builds from Adoptium, available at <a href="https://adoptium.net/">https://adoptium.net/</a>.</p>
+<p>Alternatively, you can find the Oracle JDK at <a href="https://www.oracle.com/java/technologies/downloads/">https://www.oracle.com/java/technologies/downloads/</a>.</p>
+<p>The installation process varies by operating system.</p>
+<p>Follow the provider instructions to install the JDK on your operating system.</p>
+<p>To confirm that the JDK was installed correctly, open a terminal and execute the command <code>java -version</code>. You should see output that displays the JDK version:</p>
+<pre><code class="language-bash">openjdk version "21.0.8" 2025-07-15
+OpenJDK Runtime Environment (Red_Hat-21.0.8.0.9-1) (build 21.0.8+9)
+OpenJDK 64-Bit Server VM (Red_Hat-21.0.8.0.9-1) (build 21.0.8+9, mixed mode, sharing)
+</code></pre>
 <h2 id="3-set-up-java-in-vs-code"><a class="header" href="#3-set-up-java-in-vs-code">3. Set up Java in VS Code</a></h2>
-<p>With both VS Code and the JDK installed, the next step is to configure VS Code for Java development by adding extensions. The most important is the <strong>Extension Pack for Java</strong> by Microsoft. This pack provides comprehensive support for Java, including language support, debugging, testing, and integration with build tools like Maven and Gradle. To install it, open the Extensions view in VS Code (with <code>Ctrl+Shift+X</code> or <code>Cmd+Shift+X</code>), search for "Extension Pack for Java", and click "Install". For an even better experience, you might also consider installing "Checkstyle for Java" to enforce coding standards and "SonarLint" to detect common bugs and code smells.</p>
+<p>With both VS Code and the JDK installed, the next step is to configure VS Code for Java development by adding extensions.</p>
+<p>The most important is the <strong>Extension Pack for Java</strong> by Microsoft. This pack provides comprehensive support for Java, including language support, debugging, testing, and integration with build tools like Maven and Gradle. To install it, open the Extensions view in VS Code (with <code>Ctrl+Shift+X</code> or <code>Cmd+Shift+X</code>), search for "Extension Pack for Java", and click "Install".</p>
 <h2 id="4-create-a-simple-java-program"><a class="header" href="#4-create-a-simple-java-program">4. Create a Simple Java Program</a></h2>
 <p>To verify that your setup is working, let's create a simple "Hello, World!" program. In VS Code, create a new folder named <code>hello-java</code> and, within it, a file named <code>HelloWorld.java</code>. Add the following code to the file:</p>
 <pre><code class="language-java">public class HelloWorld {
@@ -193,7 +205,8 @@
     }
 }
 </code></pre>
-<p>You can run this program directly in VS Code by pressing <code>Ctrl+F5</code>. Alternatively, you can open a terminal within the <code>hello-java</code> folder and run the commands <code>javac HelloWorld.java</code> to compile the code, followed by <code>java HelloWorld</code> to execute it. In either case, you should see the output "Hello, World!" printed to the console.</p>
+<p>You can run this program directly in VS Code by pressing <code>Ctrl+F5</code>.</p>
+<p>Alternatively, you can open a terminal within the <code>hello-java</code> folder and run the commands <code>javac HelloWorld.java</code> to compile the code, followed by <code>java HelloWorld</code> to execute it. In either case, you should see the output "Hello, World!" printed to the console.</p>
 
                     </main>
 
