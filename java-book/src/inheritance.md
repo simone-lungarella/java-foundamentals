@@ -70,3 +70,21 @@ public class Car extends Vehicle {
     }
 }
 ```
+
+## The `instanceof` Operator
+
+The `instanceof` operator is used to check whether an object is an instance of a particular class or a subclass of that class. It returns a boolean value, which is `true` if the object is an instance of the specified class or any of its subclasses, and `false` otherwise.
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Vehicle myCar = new Car("Ford", "Mustang");
+
+        // Check if myCar is an instance of Car
+        System.out.println(myCar instanceof Car); // true
+
+        // Check if myCar is an instance of Vehicle
+        System.out.println(myCar instanceof Vehicle); // true
+    }
+}
+```

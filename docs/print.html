@@ -629,6 +629,20 @@ public class Car extends Vehicle {
     }
 }
 </code></pre>
+<h2 id="the-instanceof-operator"><a class="header" href="#the-instanceof-operator">The <code>instanceof</code> Operator</a></h2>
+<p>The <code>instanceof</code> operator is used to check whether an object is an instance of a particular class or a subclass of that class. It returns a boolean value, which is <code>true</code> if the object is an instance of the specified class or any of its subclasses, and <code>false</code> otherwise.</p>
+<pre><code class="language-java">public class Main {
+    public static void main(String[] args) {
+        Vehicle myCar = new Car("Ford", "Mustang");
+
+        // Check if myCar is an instance of Car
+        System.out.println(myCar instanceof Car); // true
+
+        // Check if myCar is an instance of Vehicle
+        System.out.println(myCar instanceof Vehicle); // true
+    }
+}
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="interfaces"><a class="header" href="#interfaces">Interfaces</a></h1>
 <p>In Java, an interface is a reference type that is similar to a class but is a collection of abstract methods. An interface defines a "contract" that other classes can agree to follow. When a class implements an interface, it must provide an implementation for all the methods defined in that interface.</p>
 <h2 id="defining-an-interface"><a class="header" href="#defining-an-interface">Defining an Interface</a></h2>
