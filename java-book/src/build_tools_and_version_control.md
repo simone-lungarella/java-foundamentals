@@ -85,3 +85,13 @@ Here is a simple workflow for using Git:
     ```bash
     git commit -m "Initial commit"
     ```
+
+### Getting others' modifications
+
+When you are working in a team, you will need to get the modifications made by other developers. To do this, you can use the `git pull` command. This command will fetch the changes from the remote repository and merge them into your local branch.
+
+```bash
+git pull
+```
+
+Sometimes, Git will not be able to merge the changes automatically. This can happen if you and another developer have modified the same lines in the same file. In this case, Git will create a conflict. You will need to resolve the conflict manually by editing the file and then committing the changes.

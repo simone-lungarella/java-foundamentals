@@ -24,7 +24,7 @@ To execute a method, you typically need to create an object of the class to whic
 public class Main {
     public static void main(String[] args) {
         MyClass myObject = new MyClass(); // Create an instance of MyClass
-        myObject.greet("Mario");         // Call the greet method
+        myObject.greet("George");         // Call the greet method
     }
 }
 ```

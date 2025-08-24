@@ -47,6 +47,17 @@ for (int i = 0; i < 5; i++) {
 }
 ```
 
+Similar to the `for` loop, there is the `for-each` that let you iterate over a whole collection.
+
+```java
+// Collection like `List` will be explained later in this guide
+List<String> names = List.of("John", "Jacob", "Mary");
+
+for (String name : names) {
+    System.out.println("Name: " + name);
+}
+```
+
 The `while` loop is suitable for situations where you want to continue iterating as long as a certain condition remains true.
 
 ```java

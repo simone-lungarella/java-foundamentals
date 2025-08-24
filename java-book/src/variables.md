@@ -11,6 +11,8 @@ Here are a few examples of declaring and initializing variables with primitive t
 ```java
 int age = 25;
 double price = 19.99;
+// Note: boolean variables are often prefixed with `is`, `has`, etc.
+// to clearly indicate the purpose.
 boolean isJavaFun = true;
 char grade = 'A';
 ```
@@ -20,7 +22,7 @@ char grade = 'A';
 In addition to primitive types, Java has reference types, which are used to refer to objects. The most common reference type is `String`, which is used for sequences of characters. Unlike primitive types, reference types are typically created with the `new` keyword, although `String` has special support that allows for simpler initialization.
 
 ```java
-String name = "Mario";
+String name = "Mary";
 ```
 
 ## Declaring and Initializing

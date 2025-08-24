@@ -21,11 +21,18 @@ public class HelloWorld {
 }
 ```
 
-Let's break down this example. The line `public class HelloWorld` declares a class named `HelloWorld`, and the file containing this code must be saved as `HelloWorld.java`. The `main` method, declared as `public static void main(String[] args)`, is where the program's execution starts. The statement `System.out.println("Hello, World!");` is responsible for printing the text to the console. The lines starting with `//` are single-line comments, which are ignored by the compiler.
+Let's break down this example:
+
+- The line `public class HelloWorld` declares a class named `HelloWorld`, and the file containing this code must be saved as `HelloWorld.java`.
+- The `main` method, declared as `public static void main(String[] args)`, is where the program's execution starts.
+- The statement `System.out.println("Hello, World!");` is responsible for printing the text to the console.
+- The lines starting with `//` are single-line comments, which are ignored by the compiler.
 
 ## Java Comments
 
-Comments are essential for explaining code and improving its readability. The Java compiler ignores them entirely. There are three types of comments in Java. Single-line comments start with `//`. Multi-line comments begin with `/*` and end with `*/`. Finally, Javadoc comments, which start with `/**` and end with `*/`, are used to generate documentation for your code.
+Comments are essential for explaining code and improving its readability. The Java compiler ignores them entirely.
+
+There are three types of comments in Java. Single-line comments start with `//`. Multi-line comments begin with `/*` and end with `*/`. Finally, Javadoc comments, which start with `/**` and end with `*/`, are used to generate documentation for your code.
 
 ```java
 // This is a single-line comment.
