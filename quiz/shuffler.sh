@@ -129,7 +129,7 @@ generate_version() {
     fi
     
     # Generate the quiz
-    echo "# Valutazione 1 — Java" >> "$output_file"
+    echo "# Valutazione" >> "$output_file"
     echo "" >> "$output_file"
     echo "## Istruzioni per la compilazione" >> "$output_file"
     echo "" >> "$output_file"
