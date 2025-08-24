@@ -42,6 +42,24 @@ public int add(int a, int b) {
 int sum = add(5, 10); // The variable 'sum' will be assigned the value 15
 ```
 
+## Variable-Length Arguments (Varargs)
+
+Sometimes, you may not know in advance how many arguments a method will need to accept. Java provides a feature called **varargs** that allows a method to accept a variable number of arguments of the same type. This is indicated by an ellipsis (`...`) after the data type of the parameter.
+
+```java
+public int sum(int... numbers) {
+    int total = 0;
+    for (int number : numbers) {
+        total += number;
+    }
+    return total;
+}
+
+// You can call this method with any number of integer arguments:
+int result1 = sum(1, 2, 3);       // result1 will be 6
+int result2 = sum(10, 20, 30, 40); // result2 will be 100
+```
+
 ## Pass by Value vs. Pass by Reference
 
 When passing arguments to methods, it's important to understand that Java is strictly a **pass-by-value** language. This means that when a method is called, a copy of the value of each argument is passed to the method's parameters.
