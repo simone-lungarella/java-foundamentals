@@ -141,7 +141,7 @@ generate_version() {
     echo "- [x] Questa è la risposta corretta" >> "$output_file"
     echo "- [ ] Questa è una risposta sbagliata" >> "$output_file"
     echo "" >> "$output_file"
-    echo "Assicurati di inserire i tuoi dati personali negli spazi indicati sopra prima di iniziare. Salva il file una volta completato e consegnalo secondo le modalità indicate dal docente." >> "$output_file"
+    echo "Assicurati di inserire i tuoi dati personali negli spazi indicati sopra prima di iniziare. Salva il file una volta completato e consegnalo secondo le modalità indicate." >> "$output_file"
     echo "" >> "$output_file"
     echo "---" >> "$output_file"
     echo "" >> "$output_file"

@@ -1,19 +1,3 @@
-# Valutazione 1 — Java
-
-## Istruzioni per la compilazione
-
-**Nome:** ________________  
-**Cognome:** ________________  
-**Data:** ________________
-
-Per completare questa valutazione, edita direttamente questo file markdown inserendo una **x** tra le parentesi quadre della risposta corretta per ogni domanda. Ad esempio:
-- [x] Questa è la risposta corretta
-- [ ] Questa è una risposta sbagliata
-
-Assicurati di inserire i tuoi dati personali negli spazi indicati sopra prima di iniziare. Salva il file una volta completato e consegnalo secondo le modalità indicate dal docente.
-
----
-
 ## Data la stringa "strawberries" salvata in una variabile chiamata fruit, cosa restituirebbe `fruit.substring(2, 5)`?
 
 - [ ] rawb
@@ -21,21 +5,21 @@ Assicurati di inserire i tuoi dati personali negli spazi indicati sopra prima di
 - [ ] awb
 - [ ] traw
 
-## Come si può ottenere il polimorfismo a runtime in Java?
+## Come si può ottenere il polimorfismo (polymorphism) a runtime in Java?
 
 - [ ] overloading del metodo
 - [ ] overrunning del metodo
 - [ ] overriding del metodo
 - [ ] chiamata del metodo
 
-## Come si scrive un ciclo for-each che itera su ArrayList\<Pencil\>pencilCase?
+## Come si scrive un ciclo for-each che itera su `ArrayList<Pencil> pencilCase`?
 
 - [ ] `for (Pencil pencil : pencilCase) {}`
 - [ ] `for (pencilCase.next()) {}`
 - [ ] `for (Pencil pencil : pencilCase.iterator()) {}`
 - [ ] `for (pencil in pencilCase) {}`
 
-## Quale modificatore di accesso applica l'incapsulamento impedendo l'accesso diretto alle proprietà di una classe dall'esterno della classe (eccetto attraverso i metodi della classe stessa)?
+## Quale modificatore di accesso applica l'incapsulamento (encapsulation) impedendo l'accesso diretto alle proprietà di una classe dall'esterno della classe (eccetto attraverso i metodi della classe stessa)?
 
 - [ ] private
 - [ ] protected
@@ -63,14 +47,14 @@ class Main {
 }
 ```
 
-- [ ] 10 times
-- [ ] 9 times
-- [ ] 5 times
-- [ ] infinite number of times
+- [ ] 10 volte
+- [ ] 9 volte
+- [ ] 5 volte
+- [ ] un numero indefinito di volte, dipende dalla JVM
 
-## Il sistema di runtime avvia il tuo programma chiamando per prima quale funzione?
+## Il sistema di runtime avvia un programma chiamando per prima quale funzione?
 
-- [ ] print
+- [ ] begin
 - [ ] iterative
 - [ ] start
 - [ ] main
@@ -93,14 +77,7 @@ public class Jedi {
 - [ ] this(name, species, false)
 - [ ] super(name, species, false)
 
-## Perché l'affermazione *"Una classe anonima richiede un costruttore senza argomenti"* è falsa?
-
-- [ ] Perché l'espressione `new SuperType(...)` invoca un costruttore della superclasse, e puoi passare qualsiasi argomento richiesto (ad es., `new Foo(42) { ... }`), quindi un costruttore senza argomenti non è necessario.
-- [ ] Perché le classi anonime usano sempre il costruttore senza argomenti di `Object` indipendentemente dalla superclasse.
-- [ ] Perché puoi dichiarare il tuo costruttore parametrizzato all'interno del corpo della classe anonima.
-- [ ] Perché le classi anonime non chiamano mai alcun costruttore; si basano interamente sui blocchi di inizializzazione delle istanze.
-
-## La programmazione orientata agli oggetti è un paradigma in cui i programmi sono organizzati attorno a \_ e dati, piuttosto che a \_ e logica.
+## La programmazione orientata agli oggetti è un paradigma in cui i programmi sono organizzati attorno a __ e dati, piuttosto che a __ e logica.
 
 - [ ] funzioni; azioni
 - [ ] oggetti; azioni
@@ -167,4 +144,52 @@ public static void badMethod() {
 - [ ] const
 - [ ] static
 - [ ] final
-- [ ] nessuno, gli oggetti sono immutabili per default in Java
+- [ ] nessuno, gli oggetti sono immutabili di default in Java
+
+## Quali affermazioni sulle classi `abstract` sono vere?
+
+```
+1. Possono essere istanziate.
+2. Consentono a variabili e metodi di essere ereditati dalle sottoclassi.
+3. Possono definire costruttori.
+```
+
+- [ ] 1, 2, e 3
+- [ ] solo 3
+- [ ] 2 e 3
+- [ ] solo 2
+
+## Quale parola chiave (keyword) permette di chiamare il costruttore di una classe genitore?
+
+- [ ] parent
+- [ ] super
+- [ ] this
+- [ ] new
+
+## Quale modificatore deve avere la variabile `PI` per poter essere accessibile direttamente tramite la classe `Math` (come nel codice seguente)?
+
+```java
+public static void main(String[] args) {
+    float local = Math.PI;
+    System.out.println(local);
+}
+```
+
+- [ ] static
+- [ ] protected
+- [ ] final
+- [ ] default
+
+## In Java, una classe può ereditare da un'altra classe e allo stesso tempo implementare un'interfaccia. Quale parola chiave si utilizza per indicare che una classe fornisce l'implementazione dei metodi dichiarati in un'interfaccia?
+
+- [ ] extends
+- [ ] implements
+- [ ] inherits
+- [ ] Import
+
+## In Java, qual è l'ambito (scope) di un argomento o parametro di un metodo?
+
+- [ ] all'interno del metodo
+- [ ] sia all'interno che all'esterno del metodo
+- [ ] né all'interno né all'esterno del metodo
+- [ ] solo all'esterno del metodo

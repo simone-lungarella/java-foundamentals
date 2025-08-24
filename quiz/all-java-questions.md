@@ -870,7 +870,7 @@ public class Solution {
 - [ ] ArrayLists can hold more kinds of objects than arrays.
 - [ ] You don't have to decide the type of an ArrayList when you first make it.
 
-#### Q56. Declare a variable that holds the first four digits of Π
+#### q56. declare a variable that holds the first four digits of π
 
 - [ ] int pi = 3.141;
 - [ ] decimal pi = 3.141;

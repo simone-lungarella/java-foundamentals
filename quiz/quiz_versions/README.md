@@ -1,11 +1,11 @@
 # Quiz Versions Summary
 
-Generated on: Sat Aug 23 01:39:55 PM CEST 2025
+Generated on: Sun Aug 24 02:44:14 PM CEST 2025
 Input file: it-quiz-java.md
 Number of versions: 5
 Questions shuffled: true
 Answers shuffled: true
-Total questions per quiz: 17
+Total questions per quiz: 20
 
 ## Files Generated:
 - `quiz_version_1.md` through `quiz_version_5.md` - Randomized quiz versions
