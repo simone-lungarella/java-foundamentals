@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Introduction - Application development with Java</title>
+        <title>Wrap-up - Application development with Java</title>
 
 
         <!-- Custom HTML head -->
@@ -175,23 +175,34 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
-<p>Welcome to this comprehensive guide to Java, one of the most enduring and widely used programming languages in the world. Created in the mid-1990s, Java was built on the principle of "Write Once, Run Anywhere." This powerful idea means that a single Java program can execute on a vast array of devices and operating systems without needing to be rewritten, as long as a Java Virtual Machine (JVM) is present.</p>
-<h2 id="why-learn-java"><a class="header" href="#why-learn-java">Why Learn Java?</a></h2>
-<p>Learning Java opens the door to numerous opportunities. Its syntax is known for being clean and readable, which makes it an excellent choice for those new to programming. The cross-platform nature of Java allows developers to write code that functions seamlessly across Windows, macOS, Linux, and even specialized embedded systems. Furthermore, Java boasts a massive and mature ecosystem, offering developers access to thousands of libraries, frameworks, and tools that can accelerate development. As a result, Java remains in high demand across the industry, powering everything from large-scale enterprise applications and Android mobile apps to sophisticated cloud-based platforms.</p>
-<h2 id="what-you-will-learn"><a class="header" href="#what-you-will-learn">What You Will Learn</a></h2>
-<p>This book provides a structured path to mastering Java. You will begin by setting up a complete Java development environment. From there, you will learn to write and execute fundamental Java programs. The guide will walk you through essential concepts such as classes, objects, and methods, which form the bedrock of object-oriented programming. As you progress, you will explore more advanced features, including generics, the collections framework, and streams. To solidify your understanding, you will have opportunities to build practical, real-world projects.</p>
-<h2 id="who-this-book-is-for"><a class="header" href="#who-this-book-is-for">Who This Book is For</a></h2>
-<p>This guide is designed for a diverse audience. If you are a complete beginner with no prior programming experience, you will find a clear, step-by-step introduction to the language. If you are a developer coming from another programming language, this book will help you quickly get up to speed with the nuances of the Java ecosystem. Finally, for students, this guide will provide a strong and practical foundation that complements academic coursework, as Java is a cornerstone of many computer science programs.</p>
-<h2 id="next-steps"><a class="header" href="#next-steps">Next Steps</a></h2>
-<p>The journey begins with setting up your development environment and writing your very first Java program. Let's proceed to the "Getting Started" chapter to get everything up and running.</p>
+                        <h1 id="object-oriented-programming-wrap-up"><a class="header" href="#object-oriented-programming-wrap-up">Object-Oriented Programming Wrap-up</a></h1>
+<p>This section covered the core principles of Object-Oriented Programming (OOP) in Java. You learned about:</p>
+<ul>
+<li><strong>Inheritance:</strong> How to create new classes that inherit properties and methods from existing classes.</li>
+<li><strong>Interfaces:</strong> How to define contracts that classes can implement.</li>
+<li><strong>Abstract Classes:</strong> How to create classes that cannot be instantiated and must be subclassed.</li>
+<li><strong>Packages:</strong> How to organize your classes into packages.</li>
+</ul>
+<h2 id="exercise"><a class="header" href="#exercise">Exercise</a></h2>
+<p>Write a Java program that models a simple zoo.</p>
+<p><strong>Requirements:</strong></p>
+<ol>
+<li>Create an <code>Animal</code> interface with a <code>speak()</code> method.</li>
+<li>Create an abstract class <code>Mammal</code> that implements the <code>Animal</code> interface. The <code>Mammal</code> class should have a <code>name</code> property.</li>
+<li>Create two concrete classes, <code>Dog</code> and <code>Cat</code>, that extend the <code>Mammal</code> class. Implement the <code>speak()</code> method in each class to print "Woof!" for the dog and "Meow!" for the cat.</li>
+<li>Create a <code>Zoo</code> class that has a list of <code>Animal</code>s. Add a method to the <code>Zoo</code> class to add new animals to the list.</li>
+<li>Create a <code>Main</code> class with a <code>main</code> method to test your classes. In the <code>main</code> method, create a <code>Zoo</code> instance, add a <code>Dog</code> and a <code>Cat</code> to it, and then iterate through the animals in the zoo and call their <code>speak()</code> method.</li>
+</ol>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="packages.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
 
-                            <a rel="next prefetch" href="getting_started.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="advanced-java.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -201,8 +212,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="packages.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
 
-                    <a rel="next prefetch" href="getting_started.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="advanced-java.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

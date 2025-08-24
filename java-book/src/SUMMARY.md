@@ -14,6 +14,7 @@
     - [Methods](./methods.md)
     - [Classes and Objects](./classes_objects.md)
     - [Enums](./enums.md)
+    - [Wrap-up](./java_core_concepts_wrap_up.md)
 
 ---
 
@@ -24,6 +25,7 @@
     - [Interfaces](./interfaces.md)
     - [Abstract Classes](./abstract_classes.md)
     - [Packages](./packages.md)
+    - [Wrap-up](./object_oriented_programming_wrap_up.md)
 
 ---
 
@@ -36,6 +38,7 @@
     - [Generics](./generics.md)
     - [File I/O](./file_io.md)
     - [Threads](./threads.md)
+    - [Wrap-up](./advanced_java_wrap_up.md)
 
 ---
 

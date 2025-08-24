@@ -499,6 +499,26 @@ public void printMessage() {
     }
 }
 </code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="java-core-concepts-wrap-up"><a class="header" href="#java-core-concepts-wrap-up">Java Core Concepts Wrap-up</a></h1>
+<p>This section covered the fundamental building blocks of the Java programming language. You learned about:</p>
+<ul>
+<li><strong>Variables:</strong> How to declare and initialize variables of different data types.</li>
+<li><strong>Control Flow:</strong> How to use <code>if</code>, <code>else</code>, <code>switch</code>, <code>for</code>, and <code>while</code> to control the flow of your program.</li>
+<li><strong>Methods:</strong> How to define and call methods to organize your code.</li>
+<li><strong>Classes and Objects:</strong> The basics of object-oriented programming in Java.</li>
+<li><strong>Enums:</strong> How to use enums to define a set of constants.</li>
+</ul>
+<h2 id="exercise"><a class="header" href="#exercise">Exercise</a></h2>
+<p>Write a simple Java program that simulates a basic calculator. The program should be able to perform addition, subtraction, multiplication, and division.</p>
+<p><strong>Requirements:</strong></p>
+<ol>
+<li>Create a <code>Calculator</code> class.</li>
+<li>The <code>Calculator</code> class should have methods for <code>add</code>, <code>subtract</code>, <code>multiply</code>, and <code>divide</code>.</li>
+<li>Create a <code>Main</code> class with a <code>main</code> method to test your <code>Calculator</code>.</li>
+<li>In the <code>main</code> method, create an instance of the <code>Calculator</code> class and call its methods with some sample numbers.</li>
+<li>Print the results of the calculations to the console.</li>
+<li>Use a <code>switch</code> statement to select the operation to perform based on a variable.</li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="object-oriented-programming"><a class="header" href="#object-oriented-programming">Object-Oriented Programming</a></h1>
 <p>Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects", which can contain data in the form of fields (often known as attributes or properties) and code in the form of procedures (often known as methods).</p>
 <p>This section will introduce you to the core principles of OOP in Java. We will cover:</p>
@@ -661,6 +681,24 @@ public class Main {
 </code></pre>
 <h2 id="built-in-packages"><a class="header" href="#built-in-packages">Built-in Packages</a></h2>
 <p>Java provides a rich standard library organized into numerous built-in packages. Some of the most frequently used packages include <code>java.lang</code>, which contains fundamental classes and is automatically imported into every Java program; <code>java.util</code>, which provides the collections framework and other utility classes; <code>java.io</code> for input and output operations; <code>java.net</code> for networking; and <code>java.awt</code> for creating graphical user interfaces.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="object-oriented-programming-wrap-up"><a class="header" href="#object-oriented-programming-wrap-up">Object-Oriented Programming Wrap-up</a></h1>
+<p>This section covered the core principles of Object-Oriented Programming (OOP) in Java. You learned about:</p>
+<ul>
+<li><strong>Inheritance:</strong> How to create new classes that inherit properties and methods from existing classes.</li>
+<li><strong>Interfaces:</strong> How to define contracts that classes can implement.</li>
+<li><strong>Abstract Classes:</strong> How to create classes that cannot be instantiated and must be subclassed.</li>
+<li><strong>Packages:</strong> How to organize your classes into packages.</li>
+</ul>
+<h2 id="exercise-1"><a class="header" href="#exercise-1">Exercise</a></h2>
+<p>Write a Java program that models a simple zoo.</p>
+<p><strong>Requirements:</strong></p>
+<ol>
+<li>Create an <code>Animal</code> interface with a <code>speak()</code> method.</li>
+<li>Create an abstract class <code>Mammal</code> that implements the <code>Animal</code> interface. The <code>Mammal</code> class should have a <code>name</code> property.</li>
+<li>Create two concrete classes, <code>Dog</code> and <code>Cat</code>, that extend the <code>Mammal</code> class. Implement the <code>speak()</code> method in each class to print "Woof!" for the dog and "Meow!" for the cat.</li>
+<li>Create a <code>Zoo</code> class that has a list of <code>Animal</code>s. Add a method to the <code>Zoo</code> class to add new animals to the list.</li>
+<li>Create a <code>Main</code> class with a <code>main</code> method to test your classes. In the <code>main</code> method, create a <code>Zoo</code> instance, add a <code>Dog</code> and a <code>Cat</code> to it, and then iterate through the animals in the zoo and call their <code>speak()</code> method.</li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="advanced-topics"><a class="header" href="#advanced-topics">Advanced Topics</a></h1>
 <p>This section delves into more advanced topics in Java that are essential for building robust and scalable applications. We will cover a range of concepts that will help you write more professional and efficient code.</p>
 <p>In this section, you will learn about:</p>
@@ -958,6 +996,27 @@ public class WriteFileExample {
     }
 }
 </code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="advanced-java-wrap-up"><a class="header" href="#advanced-java-wrap-up">Advanced Java Wrap-up</a></h1>
+<p>This section covered some of the more advanced topics in Java. You learned about:</p>
+<ul>
+<li><strong>Exceptions:</strong> How to handle errors and exceptional situations in your code.</li>
+<li><strong>Collections:</strong> How to use the Java Collections Framework to store and manipulate groups of objects.</li>
+<li><strong>Streams:</strong> How to use the Streams API to process collections of data in a declarative way.</li>
+<li><strong>Generics:</strong> How to write type-safe code that works with different types of objects.</li>
+<li><strong>File I/O:</strong> How to read from and write to files.</li>
+<li><strong>Threads:</strong> How to write multithreaded programs that can perform multiple tasks concurrently.</li>
+</ul>
+<h2 id="exercise-2"><a class="header" href="#exercise-2">Exercise</a></h2>
+<p>Write a Java program that reads a list of words from a file, counts the frequency of each word, and then writes the results to a new file.</p>
+<p><strong>Requirements:</strong></p>
+<ol>
+<li>Create a text file named <code>words.txt</code> with a list of words, one word per line.</li>
+<li>Write a program that reads the words from <code>words.txt</code>.</li>
+<li>Use a <code>Map</code> to store the frequency of each word.</li>
+<li>Use the Streams API to process the list of words.</li>
+<li>Write the word frequencies to a new file named <code>word_frequencies.txt</code>.</li>
+<li>Handle any potential <code>IOException</code>s that may occur.</li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="build-tools-and-version-control"><a class="header" href="#build-tools-and-version-control">Build Tools and Version Control</a></h1>
 <p>In addition to the Java language itself, there are two other essential tools that every modern Java developer should know: a build tool and a version control system.</p>
 <h2 id="maven-the-build-tool"><a class="header" href="#maven-the-build-tool">Maven: The Build Tool</a></h2>
@@ -1056,6 +1115,22 @@ public class WriteFileExample {
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 
