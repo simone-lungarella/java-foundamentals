@@ -308,6 +308,20 @@ double y = x;  // The int value is safely converted to a double
 double a = 9.78;
 int b = (int) a;  // The double is truncated to an int, resulting in b = 9
 </code></pre>
+<h2 id="variable-scope"><a class="header" href="#variable-scope">Variable Scope</a></h2>
+<p>In Java, the scope of a variable determines where it can be accessed in your code. There are three main types of variable scope:</p>
+<ul>
+<li>
+<p><strong>Local Variables:</strong> These are declared within a method or a block of code. They can only be accessed within that specific method or block.</p>
+</li>
+<li>
+<p><strong>Instance Variables:</strong> These are declared within a class but outside of any method. They are associated with an instance of the class (an object) and can be accessed by any method of that instance.</p>
+</li>
+<li>
+<p><strong>Class (or Static) Variables:</strong> These are declared with the <code>static</code> keyword and are associated with the class itself, not with any specific instance. They can be accessed from anywhere in the class.</p>
+</li>
+</ul>
+<p>Understanding variable scope is crucial for writing well-structured and bug-free Java code.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="control-flow-in-java"><a class="header" href="#control-flow-in-java">Control Flow in Java</a></h1>
 <p>Control flow statements are essential tools in Java that allow you to dictate the execution path of your code. These statements enable you to run certain blocks of code based on specific conditions and to repeat actions using loops.</p>
 <h2 id="conditional-statements"><a class="header" href="#conditional-statements">Conditional Statements</a></h2>

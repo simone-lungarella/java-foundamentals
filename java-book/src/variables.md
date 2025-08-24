@@ -51,3 +51,15 @@ double y = x;  // The int value is safely converted to a double
 double a = 9.78;
 int b = (int) a;  // The double is truncated to an int, resulting in b = 9
 ```
+
+## Variable Scope
+
+In Java, the scope of a variable determines where it can be accessed in your code. There are three main types of variable scope:
+
+- **Local Variables:** These are declared within a method or a block of code. They can only be accessed within that specific method or block.
+
+- **Instance Variables:** These are declared within a class but outside of any method. They are associated with an instance of the class (an object) and can be accessed by any method of that instance.
+
+- **Class (or Static) Variables:** These are declared with the `static` keyword and are associated with the class itself, not with any specific instance. They can be accessed from anywhere in the class.
+
+Understanding variable scope is crucial for writing well-structured and bug-free Java code.
