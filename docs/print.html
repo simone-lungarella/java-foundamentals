@@ -1117,10 +1117,20 @@ public class WriteFileExample {
 &lt;/project&gt;
 </code></pre>
 <h3 id="building-a-project-with-maven"><a class="header" href="#building-a-project-with-maven">Building a Project with Maven</a></h3>
-<p>To build a project with Maven, you can use the following command:</p>
-<pre><code class="language-bash">mvn package
+<p>To build a project with Maven, you can use the following commands:</p>
+<div class="table-wrapper"><table><thead><tr><th>Command</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>mvn compile</code></td><td>Compiles the source code of the project.</td></tr>
+<tr><td><code>mvn test</code></td><td>Runs the tests for the project.</td></tr>
+<tr><td><code>mvn package</code></td><td>Compiles the source code, runs the tests, and packages the application into a JAR file in the <code>target</code> directory.</td></tr>
+<tr><td><code>mvn clean</code></td><td>Cleans the project by deleting the <code>target</code> directory.</td></tr>
+<tr><td><code>mvn install</code></td><td>Deploys the package into the local repository, for use as a dependency in other projects locally.</td></tr>
+</tbody></table>
+</div>
+<p>You can also combine commands, for example:</p>
+<pre><code class="language-bash">mvn clean package
 </code></pre>
-<p>This command will compile the source code, run the tests, and package the application into a JAR file in the <code>target</code> directory.</p>
+<p>This command will first clean the project and then build it.</p>
+<p>To learn more about Maven, checkout the official documentation on <a href="https://maven.apache.org/guides/getting-started/">maven.apache.org</a>.</p>
 <h2 id="git-the-version-control-system"><a class="header" href="#git-the-version-control-system">Git: The Version Control System</a></h2>
 <p><a href="https://git-scm.com/">Git</a> is a distributed version control system that is used to track changes to source code over time. It allows multiple developers to work on the same project simultaneously without overwriting each other's changes.</p>
 <h3 id="a-simple-git-workflow"><a class="header" href="#a-simple-git-workflow">A Simple Git Workflow</a></h3>
@@ -1147,13 +1157,14 @@ public class WriteFileExample {
 <pre><code class="language-bash">git pull
 </code></pre>
 <p>Sometimes, Git will not be able to merge the changes automatically. This can happen if you and another developer have modified the same lines in the same file. In this case, Git will create a conflict. You will need to resolve the conflict manually by editing the file and then committing the changes.</p>
+<p>To learn more about Git, checkout the Pro Git Book on <a href="https://git-scm.com/book/en/v2">git-scm.com</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="useful-resources"><a class="header" href="#useful-resources">Useful Resources</a></h1>
 <p>This chapter provides a list of useful resources to help you continue your journey with Java.</p>
 <h2 id="official-documentation"><a class="header" href="#official-documentation">Official documentation</a></h2>
 <ul>
 <li><a href="https://docs.oracle.com/en/java/javase/17/docs/api/index.html">Oracle Java Documentation</a>: The official and most comprehensive resource for the Java programming language.</li>
-<li><a href="https://maven.apache.org/guides/index.html">Maven Documentation</a>: The official documentation for the Maven build tool.</li>
-<li><a href="https://git-scm.com/doc">Git Documentation</a>: The official documentation for the Git version control system.</li>
+<li><a href="https://maven.apache.org/guides/getting-started/">Maven Documentation</a>: The official documentation for the Maven build tool.</li>
+<li><a href="https://git-scm.com/book/en/v2">Git Documentation</a>: The official documentation for the Git version control system.</li>
 <li><a href="https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html">Oracle's Java Naming Conventions</a>: A set of conventions to follow when naming your identifiers in Java.</li>
 <li><a href="https://google.github.io/styleguide/javaguide.html">Google Java Style Guide</a>: A complete guide to Google's coding standards for source code in the Java programming language.</li>
 </ul>
@@ -1161,6 +1172,8 @@ public class WriteFileExample {
 <ul>
 <li><a href="https://www.baeldung.com/">Baeldung</a>: A popular blog with a wealth of tutorials and articles on Java and related technologies.</li>
 </ul>
+<h2 id="contribute"><a class="header" href="#contribute">Contribute</a></h2>
+<p>If you find any issue with this guide, feel free to submit an issue on <a href="https://github.com/simone-lungarella/java-fundamentals/issues/new">GitHub</a> and get it solved.</p>
 
                     </main>
 

@@ -52,13 +52,25 @@ Here is an example of a simple `pom.xml` file:
 
 ### Building a Project with Maven
 
-To build a project with Maven, you can use the following command:
+To build a project with Maven, you can use the following commands:
+
+| Command            | Description                                                                  |
+| ------------------ | ---------------------------------------------------------------------------- |
+|`mvn compile`       | Compiles the source code of the project.                                     |
+|`mvn test`          | Runs the tests for the project.                                              |
+|`mvn package`       | Compiles the source code, runs the tests, and packages the application into a JAR file in the `target` directory. |
+|`mvn clean`         | Cleans the project by deleting the `target` directory.                       |
+|`mvn install`       | Deploys the package into the local repository, for use as a dependency in other projects locally. |
+
+You can also combine commands, for example:
 
 ```bash
-mvn package
+mvn clean package
 ```
 
-This command will compile the source code, run the tests, and package the application into a JAR file in the `target` directory.
+This command will first clean the project and then build it.
+
+To learn more about Maven, checkout the official documentation on [maven.apache.org](https://maven.apache.org/guides/getting-started/).
 
 ## Git: The Version Control System
 
@@ -95,3 +107,6 @@ git pull
 ```
 
 Sometimes, Git will not be able to merge the changes automatically. This can happen if you and another developer have modified the same lines in the same file. In this case, Git will create a conflict. You will need to resolve the conflict manually by editing the file and then committing the changes.
+
+
+To learn more about Git, checkout the Pro Git Book on [git-scm.com](https://git-scm.com/book/en/v2).
