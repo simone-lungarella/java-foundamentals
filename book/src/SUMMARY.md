@@ -3,6 +3,7 @@
 [Introduction](./introduction.md)
 - [Getting Started](./getting_started.md)
 - [Development Environment](./development_environment.md)
+- [LSP](./lsp.md)
 
 ---
 

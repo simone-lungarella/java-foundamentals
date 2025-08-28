@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Java Core Concepts - Application development with Java</title>
+        <title>LSP - Application development with Java</title>
 
 
         <!-- Custom HTML head -->
@@ -175,52 +175,50 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="java-basics"><a class="header" href="#java-basics">Java Basics</a></h1>
-<p>This chapter introduces the fundamental building blocks of the Java language, providing a foundation for writing your first programs.</p>
-<h2 id="basic-syntax"><a class="header" href="#basic-syntax">Basic Syntax</a></h2>
-<p>At the core of every Java program is a <strong>class</strong>. The execution of a program begins in the <code>main</code> method, which serves as the entry point. It is important to be mindful of Java's syntax rules. The language is case-sensitive, meaning that <code>myVariable</code> and <code>MyVariable</code> would be treated as two distinct variables. By convention, class names should always begin with an uppercase letter, while method names should start with a lowercase letter.</p>
-<p>Check out the <a href="https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html">Java naming convention</a> to learn how to properly name things in Java.</p>
-<h2 id="hello-world-example"><a class="header" href="#hello-world-example">"Hello, World!" Example</a></h2>
-<p>The simplest program you can write in Java is the classic "Hello, World!". This program's sole purpose is to print the phrase "Hello, World!" to the console.</p>
-<pre><code class="language-java">public class HelloWorld {
-    public static void main(String[] args) {
-        // This line prints "Hello, World!"
-        System.out.println("Hello, World!");
-    }
-}
-</code></pre>
-<p>Let's break down this example:</p>
+                        <h1 id="language-server-protocol-lsp"><a class="header" href="#language-server-protocol-lsp">Language Server Protocol (LSP)</a></h1>
+<p>The Language Server Protocol (LSP) is a protocol developed by Microsoft that defines a common way for editors and IDEs to communicate with language servers. A language server provides language-specific features like code completion, diagnostics, and navigation.</p>
+<p>By using LSP, a single language server can be used by multiple editors and IDEs, which means that language support can be implemented once and be available in many different tools.</p>
+<h2 id="how-lsp-helps-in-development"><a class="header" href="#how-lsp-helps-in-development">How LSP helps in development</a></h2>
+<p>When configured correctly, an LSP server for Java can provide a lot of powerful features in your editor of choice, like VS Code, Sublime Text, or Vim/Neovim. These features can significantly improve your development workflow.</p>
+<h3 id="code-navigation"><a class="header" href="#code-navigation">Code Navigation</a></h3>
 <ul>
-<li>The line <code>public class HelloWorld</code> declares a class named <code>HelloWorld</code>, and the file containing this code must be saved as <code>HelloWorld.java</code>.</li>
-<li>The <code>main</code> method, declared as <code>public static void main(String[] args)</code>, is where the program's execution starts.</li>
-<li>The statement <code>System.out.println("Hello, World!");</code> is responsible for printing the text to the console.</li>
-<li>The lines starting with <code>//</code> are single-line comments, which are ignored by the compiler.</li>
+<li><strong>Go to Definition:</strong> Quickly jump to the definition of a class, method, or variable.</li>
+<li><strong>Find References:</strong> Find all references to a symbol in the codebase.</li>
+<li><strong>Symbol Search:</strong> Search for symbols in the current file or the entire workspace.</li>
 </ul>
-<h2 id="java-comments"><a class="header" href="#java-comments">Java Comments</a></h2>
-<p>Comments are essential for explaining code and improving its readability. The Java compiler ignores them entirely.</p>
-<p>There are three types of comments in Java. Single-line comments start with <code>//</code>. Multi-line comments begin with <code>/*</code> and end with <code>*/</code>. Finally, Javadoc comments, which start with <code>/**</code> and end with <code>*/</code>, are used to generate documentation for your code.</p>
-<pre><code class="language-java">// This is a single-line comment.
-
-/*
-This is a
-multi-line
-comment.
-*/
-
-/**
- * This is a Javadoc comment, used for generating documentation.
- */
-</code></pre>
+<h3 id="documentation-on-hover"><a class="header" href="#documentation-on-hover">Documentation on Hover</a></h3>
+<ul>
+<li><strong>Hover:</strong> Hovering over a symbol will show its documentation, including method signatures, parameter information, and Javadocs.</li>
+</ul>
+<h3 id="quick-fixes-and-refactoring"><a class="header" href="#quick-fixes-and-refactoring">Quick Fixes and Refactoring</a></h3>
+<ul>
+<li><strong>Diagnostics:</strong> The LSP server analyzes your code and provides diagnostics (errors and warnings) as you type.</li>
+<li><strong>Quick Fixes:</strong> For many diagnostics, the LSP server can suggest quick fixes that you can apply with a single click. For example, it can automatically add a missing import statement.</li>
+<li><strong>Refactoring:</strong> Perform basic refactoring operations like renaming a symbol.</li>
+</ul>
+<h2 id="lsp-in-vs-code"><a class="header" href="#lsp-in-vs-code">LSP in VS Code</a></h2>
+<p>Visual Studio Code has great support for the Language Server Protocol. For Java development, the <a href="https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack">Extension Pack for Java</a> by Microsoft provides a rich set of features powered by an LSP server. Once installed, you will get all the features mentioned above and more, right out of the box.</p>
+<p>The LSP integration makes the development experience in a lightweight editor like VS Code much closer to that of a full-fledged IDE like IntelliJ IDEA or Eclipse.</p>
+<h3 id="using-lsp-features-in-vs-code"><a class="header" href="#using-lsp-features-in-vs-code">Using LSP features in VS Code</a></h3>
+<p>Once you have the <a href="https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack">Extension Pack for Java</a> installed and a Java project opened, you can use the LSP features as follows:</p>
+<ul>
+<li><strong>Go to Definition:</strong> Right-click on a symbol (e.g., a method or class name) and select "Go to Definition", or <code>F12</code>.</li>
+<li><strong>Find References:</strong> Right-click on a symbol and select "Find All References", or <code>Shift+F12</code>.</li>
+<li><strong>Symbol Search:</strong> Open the Command Palette (<code>Ctrl+Shift+P</code> or <code>Cmd+Shift+P</code> on Mac) and type <code>@</code> to search for symbols in the current file, or <code>#</code> to search the workspace.</li>
+<li><strong>Hover:</strong> Simply move your mouse cursor over any symbol to see its documentation.</li>
+<li><strong>Quick Fixes:</strong> When you have an error or warning, a lightbulb icon will appear. Click on it to see the available quick fixes, or use the <code>Ctrl+.</code> (<code>Cmd+.</code> on Mac) shortcut.</li>
+<li><strong>Refactoring:</strong> Right-click on a symbol and select "Rename Symbol" (<code>F2</code>) to rename it across the project.</li>
+</ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="lsp.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="development_environment.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="variables.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="java_core_concepts.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -230,11 +228,11 @@ comment.
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="lsp.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="development_environment.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="variables.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="java_core_concepts.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
